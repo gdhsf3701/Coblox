@@ -10,6 +10,10 @@ public class Bt_Manager : MonoBehaviour
     public void Quit_bt_Click()
     {
         Backend.BMember.Logout();
+        if (GameObject.Find("ChatManager"))
+        {
+            Destroy(GameObject.Find("ChatManager"));
+        }
         SceneManager.LoadScene("02_LoginorSighUP");
     }
     public void reStart_bt_Click()
