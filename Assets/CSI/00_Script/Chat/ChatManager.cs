@@ -508,6 +508,7 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
     {
         print("에러");
         print(error.ToString());
+
         if (GameStartImage)
         {
             GameStartImage.GetComponent<Button>().interactable = false;
@@ -520,7 +521,9 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
             case(ERROR_MESSAGE.ALREADY_JOIN_CHANNEL):
                 break;
             case(ERROR_MESSAGE.NOT_JOIN_CHANNEL):
-
+                resetthisScript();
+                PrintALLPlr();
+                PlayerListUI.SetActive(false);
                 GameStartImage.GetComponent<Button>().interactable = false;
                 GameStartImage.color = new Color(0.7924528f, 0, 0, 1);
 
