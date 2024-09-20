@@ -27,7 +27,7 @@ public class PlayerInfo
 }
 public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
 {
-    public ChatManager Instance;
+    public static ChatManager Instance;
     private BackndChat.ChatClient ChatClient = null;
     public GameObject PlayerWaitLoding_GameObj,PlayerListUI;
     public Image GameStartImage;
@@ -529,10 +529,25 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
                 break;
         }
     }
+    
+    
+    public void Edit_DataBase_Point(int Final_point)
+    {
+        PlayerInfo result = players.Find(player => player.UID ==DataBaseScript.Instance.UID && player.Name == DataBaseScript.Instance.NicName);
+        if (result != null)
+        {
+            result.Point = Final_point;
 
-    private void OnApplicationQuit()
+        }
+        global::SendMessage.Instance.SentMessage("GetPoint",$"{Final_point}");
+        PrintALLPlr();
+    }
+    
+
+
+    /*private void OnApplicationQuit()
     {
         ChatClient.SendLeaveChannel("Main",RoomName,RoomCode);
         ChatClient?.Dispose();
-    }
+    }*/
 }

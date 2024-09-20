@@ -29,6 +29,7 @@ public class DataBaseScript : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        
     }
 
     public void Resetvalue()
@@ -38,6 +39,7 @@ public class DataBaseScript : MonoBehaviour
         isOwner = false;
         siteData = null;
         List = null;
+        
     }
     
     //--------------------------------데이터
@@ -55,4 +57,6 @@ public class DataBaseScript : MonoBehaviour
         }
     }
 
+
+    
 }
