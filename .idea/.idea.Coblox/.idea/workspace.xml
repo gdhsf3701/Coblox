@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc64a87f-2c70-4f09-a57a-13b8de8dcdeb" name="변경" comment="" />
+    <list default="true" id="fc64a87f-2c70-4f09-a57a-13b8de8dcdeb" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/Chat/ChatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/Chat/ChatManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/EndGame/Bt_Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/EndGame/Bt_Manager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/EndGame/EndPlayerList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/EndGame/EndPlayerList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/05_EndGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/05_EndGame.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CSI/Font/Pretendard-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/Font/Pretendard-Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CSI/Resources/Ranking/Main.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/Resources/Ranking/Main.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,6 +112,7 @@
       <workItem from="1726790145944" duration="1518000" />
       <workItem from="1726794165423" duration="5120000" />
       <workItem from="1726811625223" duration="885000" />
+      <workItem from="1726898133755" duration="3370000" />
     </task>
     <servers />
   </component>

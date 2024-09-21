@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -21,4 +22,6 @@ public class Bt_Manager : MonoBehaviour
         SceneManager.LoadScene(DataBaseScript.Instance.isOwner ? "03_1_Teacher" : "03_2_StudentJoinRoom");//엔드 씬에 오기전 초기화를 실행 해서 문제가 생김 모두 선생님 화면으로 들어가짐
         
     }
+
+   
 }

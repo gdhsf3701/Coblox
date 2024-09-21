@@ -405,6 +405,7 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
                             string ui0d = parts[1];
                             int point = int.Parse(parts[2]);
                             DataBaseScript.Instance.List.Add((rank, ui0d, point));
+
                         }
                     }
 
@@ -418,6 +419,7 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
                     foreach (var rank in DataBaseScript.Instance.List)
                     {
                         Debug.Log($"Rank: {rank.Rank}, UID: {rank.Name}, Point: {rank.Point}");
+
                     }
                     Destroy(gameObject);
 
