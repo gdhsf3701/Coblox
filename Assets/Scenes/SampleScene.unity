@@ -485,8 +485,8 @@ Canvas:
   m_GameObject: {fileID: 820884519}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -576,6 +576,7 @@ MonoBehaviour:
   visual: {fileID: 1387674918}
   graduation: {fileID: 575397533459726448, guid: ba9026fbc6de3fd469f56b1b7bb243dd, type: 3}
   radius: 0
+  angle: 42.5
 --- !u!114 &1161655848
 MonoBehaviour:
   m_ObjectHideFlags: 0

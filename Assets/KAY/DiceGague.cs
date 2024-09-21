@@ -15,7 +15,7 @@ public class DiceGague : MonoBehaviour
     private bool isLeftMove;    // 현재 왼쪽으로 가고있는지 아닌지
     private float curAngle;     // 현재 각도
     public float radius;        // 원의 반지름
-    private float angle;        // 똑딱거릴 최대 각도
+    public float angle = 40;        // 똑딱거릴 최대 각도
 
     private bool isPlaying = true;
     public bool IsPlaying
@@ -42,7 +42,8 @@ public class DiceGague : MonoBehaviour
         radius = Vector2.Distance(transform.position, center.position);
 
         Vector3 direction = transform.position - center.position;
-        angle = 90f - Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        //angle = 90f - Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        print(angle);
 
         // 눈금 생성
         for (int i = 1; i < GRADE; i++)

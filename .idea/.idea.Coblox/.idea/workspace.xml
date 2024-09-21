@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc64a87f-2c70-4f09-a57a-13b8de8dcdeb" name="변경" comment="" />
+    <list default="true" id="fc64a87f-2c70-4f09-a57a-13b8de8dcdeb" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -104,6 +108,7 @@
       <workItem from="1726794165423" duration="5120000" />
       <workItem from="1726811625223" duration="885000" />
       <workItem from="1726898133755" duration="3969000" />
+      <workItem from="1726906605057" duration="406000" />
     </task>
     <servers />
   </component>
