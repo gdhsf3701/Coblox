@@ -27,7 +27,7 @@ public class PlayerInfo
 }
 public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
 {
-    public ChatManager Instance;
+    public static ChatManager Instance;
     private BackndChat.ChatClient ChatClient = null;
     public GameObject PlayerWaitLoding_GameObj,PlayerListUI;
     public Image GameStartImage;
@@ -405,6 +405,7 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
                             string ui0d = parts[1];
                             int point = int.Parse(parts[2]);
                             DataBaseScript.Instance.List.Add((rank, ui0d, point));
+
                         }
                     }
 
@@ -418,6 +419,7 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
                     foreach (var rank in DataBaseScript.Instance.List)
                     {
                         Debug.Log($"Rank: {rank.Rank}, UID: {rank.Name}, Point: {rank.Point}");
+
                     }
                     Destroy(gameObject);
 
@@ -508,6 +510,7 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
     {
         print("에러");
         print(error.ToString());
+
         if (GameStartImage)
         {
             GameStartImage.GetComponent<Button>().interactable = false;
@@ -520,7 +523,9 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
             case(ERROR_MESSAGE.ALREADY_JOIN_CHANNEL):
                 break;
             case(ERROR_MESSAGE.NOT_JOIN_CHANNEL):
-
+                resetthisScript();
+                PrintALLPlr();
+                PlayerListUI.SetActive(false);
                 GameStartImage.GetComponent<Button>().interactable = false;
                 GameStartImage.color = new Color(0.7924528f, 0, 0, 1);
 
@@ -529,10 +534,25 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
                 break;
         }
     }
+    
+    
+    public void Edit_DataBase_Point(int Final_point)
+    {
+        PlayerInfo result = players.Find(player => player.UID ==DataBaseScript.Instance.UID && player.Name == DataBaseScript.Instance.NicName);
+        if (result != null)
+        {
+            result.Point = Final_point;
 
-    private void OnApplicationQuit()
+        }
+        global::SendMessage.Instance.SentMessage("GetPoint",$"{Final_point}");
+        PrintALLPlr();
+    }
+    
+
+
+    /*private void OnApplicationQuit()
     {
         ChatClient.SendLeaveChannel("Main",RoomName,RoomCode);
         ChatClient?.Dispose();
-    }
+    }*/
 }

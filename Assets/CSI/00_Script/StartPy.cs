@@ -1,32 +1,54 @@
+
 using System;
 using UnityEngine;
 using UnityEngine.Networking;
 using System.Collections;
 using System.Text;
 using System.Diagnostics;
-using System.IO;
 using DI = System.Diagnostics;
+
 
 
 public class StartPy : MonoBehaviour
 {
-    
+    public static StartPy Instance;
+
     private string url = "http://localhost:5000/api/CSIIMNIKASTART";
     public bool Startbool;
+    
+   
+    
     private void Awake()
     {
-
-        print(System.Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory));
-        print(Application.persistentDataPath);
-        print(System.Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
-        //Environment.SpecialFolder.Desktop
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
         
-        //Environment.SpecialFolder.Personal
-        string path = Application.persistentDataPath;
+        if (Application.isEditor)
+        {
+            // 에디터에서 실행 중일 때의 코드
+        }
+        else
+        {
+            // 빌드본에서 실행 중일 때의 코드
+        }
+        print(Application.dataPath);
+        print(Application.dataPath + "\\Resource\\Start\\StartPy.exe");
+        //D:\빌드\shuhack_Git\Coblox_Data
+        Resources.Load("Start/StartPy");
+        //Process.Start(Application.dataPath.Replace("/","\\") + "\\Resources\\Start\\StartPy.exe");
+        Process.Start(Application.dataPath + "\\Resources\\Start\\StartPy.exe");
+    }
 
-        //Process.Start(path + "/Start/CSIIMNIKASTART.exe");
-
-
+    private void OnApplicationQuit()
+    {
+        Disable_Py();
     }
 
     void Start()
@@ -35,14 +57,19 @@ public class StartPy : MonoBehaviour
         
         StartCoroutine(CallPythonScript(single_param));
         print("실행");
-        var processList = DI.Process.GetProcessesByName("CSIIMNIKASTART");
+
+    }
+
+    public void Disable_Py()
+    {
+        var processList = DI.Process.GetProcessesByName("StartPy");
         if(processList.Length > 0)
         {
             print("프로세스가 1개이상 동작중..");
-            foreach(Process process in Process.GetProcesses())
+            
+            foreach(Process process in processList)
             {
-                print(process.ProcessName);
-                if (process.ProcessName.StartsWith("CSIIMNIKASTART"))
+                if (process.ProcessName.StartsWith("StartPy"))
                 {
                     process.Kill();
                 }
@@ -53,32 +80,12 @@ public class StartPy : MonoBehaviour
             print("실행된 프로세스 없음");
         }
     }
-    
-    public void StartPython()
-    {
-        ProcessStartInfo processStartInfo = new ProcessStartInfo();
-        processStartInfo.FileName = "C:\\Users\\jjsju\\AppData\\Local\\Programs\\Python\\Python312\\python.exe"; // 파이썬 실행 파일의 위치를 따옴표 안에 입력하세요.
-        processStartInfo.Arguments = string.Format("{0}", "C:\\Users\\jjsju\\PycharmProjects\\hml-equation-parser\\Start.py"); // 파이썬 스크립트 파일의 전체 경로를 입력하세요.
-        processStartInfo.UseShellExecute = false;
-        processStartInfo.RedirectStandardOutput = true;
-        using(Process process = Process.Start(processStartInfo))
-        {
-            using(StreamReader reader = process.StandardOutput)
-            {
-                string result = reader.ReadToEnd();
-                print(result);
-            }
-        }
-    }
-
     private void Update()
     {
         if (Startbool)
         {
-            string single_param = "9-3   {1} over {3}+1=?";
-
-            StartCoroutine(CallPythonScript(single_param));
             Startbool = false;
+            Disable_Py();
         }
     }
 

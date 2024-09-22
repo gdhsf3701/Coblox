@@ -13,7 +13,8 @@ public class Test : MonoBehaviour
         {
             print("보내기 시작");
             NowPoint += 100;
-            global::SendMessage.Instance.SentMessage("GetPoint",$"{NowPoint}");
+            ChatManager.Instance.Edit_DataBase_Point(NowPoint);
+
         }
     }
 
@@ -28,6 +29,8 @@ public class Test : MonoBehaviour
                                                           $"{DataBaseScript.Instance.siteData[count,5]}:" +
                                                           $"{DataBaseScript.Instance.siteData[count,6]}:" +
                                                           $"{DataBaseScript.Instance.siteData[count,7]}");
+    
+        
     }
 
     private void Start()

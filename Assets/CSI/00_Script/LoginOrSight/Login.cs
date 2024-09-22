@@ -47,7 +47,6 @@ public class Login : MonoBehaviour
             if (Backend.UserNickName != nicknamel.text)//자신의 이름과 다른사람의 이름이 같지 않으면
             {
                 BackendReturnObject bro2 = Backend.BMember.CheckNicknameDuplication(nicknamel.text);
-                print(bro2);
                 if(!bro2.IsSuccess())
                 {
                     Text.color = new Color(0.6603774f,0.1775543f,0.1775543f);
