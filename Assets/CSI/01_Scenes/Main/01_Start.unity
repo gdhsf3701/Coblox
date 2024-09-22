@@ -386,8 +386,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "MY \nMATHTAURANT"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7b0c4cf3c7f301e41b3413ddccee739b, type: 2}
-  m_sharedMaterial: {fileID: 4296457718781179330, guid: 7b0c4cf3c7f301e41b3413ddccee739b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e754723bc02a21447b88b3963231da50, type: 2}
+  m_sharedMaterial: {fileID: -6619902549872421458, guid: e754723bc02a21447b88b3963231da50, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1491,8 +1491,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: START
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7b0c4cf3c7f301e41b3413ddccee739b, type: 2}
-  m_sharedMaterial: {fileID: 4296457718781179330, guid: 7b0c4cf3c7f301e41b3413ddccee739b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e754723bc02a21447b88b3963231da50, type: 2}
+  m_sharedMaterial: {fileID: -6619902549872421458, guid: e754723bc02a21447b88b3963231da50, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

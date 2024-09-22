@@ -8,6 +8,7 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI Text;
     [SerializeField] private Slider slider;
+    [SerializeField] private Image FillIm;
     
         
     private float timeRemaining = 10.0f;
@@ -31,6 +32,22 @@ public class Timer : MonoBehaviour
             {
                 timeRemaining -= Time.deltaTime;
                 slider.value = timeRemaining;
+                print(timeRemaining/DataBaseScript.Instance.Time*100);
+                if (DataBaseScript.Instance.Time%100 < timeRemaining)
+                {
+                    FillIm.color = new Color(Mathf.Lerp(0, 242, Time.deltaTime),255,255);
+                }else if (DataBaseScript.Instance.Time%50 < timeRemaining)
+                {
+                    FillIm.color = new Color(242,Mathf.Lerp(255, 188, Time.deltaTime),255);
+                }else if (DataBaseScript.Instance.Time%30 < timeRemaining)
+                {
+                    FillIm.color = new Color(242,Mathf.Lerp(188, 94, Time.deltaTime),255);
+                }else if (DataBaseScript.Instance.Time%15 < timeRemaining)
+                {
+                    FillIm.color = new Color(242,Mathf.Lerp(0, 94, Time.deltaTime),255);
+                }
+                
+
                 DisplayTime(timeRemaining);
             }
             else
