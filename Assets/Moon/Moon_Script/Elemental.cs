@@ -12,9 +12,9 @@ public class Elemental : MonoBehaviour
     }
     public void ChangeElemental()
     {
-        if (plate.nowElemental != elementalNum)
+        if (plate.NowElemental != elementalNum)
         {
-            plate.nowElemental = elementalNum;
+            plate.NowElemental = elementalNum;
         }
     }
 }
