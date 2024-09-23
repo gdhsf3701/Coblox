@@ -180,6 +180,10 @@ PrefabInstance:
       value: "ID : \nPW :\nNICNAME : "
       objectReference: {fileID: 0}
     - target: {fileID: 3959424247256408940, guid: 1a7f74ee21c46e54cbee7d1f4f3a19b5, type: 3}
+      propertyPath: m_margin.x
+      value: -210.45639
+      objectReference: {fileID: 0}
+    - target: {fileID: 3959424247256408940, guid: 1a7f74ee21c46e54cbee7d1f4f3a19b5, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: e754723bc02a21447b88b3963231da50, type: 2}

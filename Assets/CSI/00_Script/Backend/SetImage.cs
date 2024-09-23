@@ -135,7 +135,7 @@ public class SetImage : MonoBehaviour
     public IEnumerator CallPythonScript(string single_param,Action<string> callback)
     {
         
-        RequestData requestData = new RequestData { param = single_param };
+        RequestData requestData = new RequestData { param = single_param }; 
         string json = JsonUtility.ToJson(requestData);
         // json에서 'param' 키가 들어간 것을 확인하세요.
         print($"Sending JSON data: {json}");

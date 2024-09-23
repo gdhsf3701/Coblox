@@ -12,6 +12,7 @@ public class DataBaseScript : MonoBehaviour
     public string NicName;
     public string[ , ] siteData;
     public float Time;
+    public int NowPoint;
     
     //[]갯수 , [][]정보
     //** [이름,점수] **//
@@ -39,7 +40,8 @@ public class DataBaseScript : MonoBehaviour
         isOwner = false;
         siteData = null;
         List = null;
-        
+        NowPoint = 0;
+
     }
     
     //--------------------------------데이터

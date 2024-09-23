@@ -53,6 +53,7 @@ public class BackendManager : MonoBehaviour
             DataBaseScript.Instance.siteData[i,5] = row["tack4"].ToString();
             DataBaseScript.Instance.siteData[i,6] = row["tack5"].ToString();
             DataBaseScript.Instance.siteData[i,7] = row["success"].ToString();
+            DataBaseScript.Instance.siteData[i,8] = row["score"].ToString();/////////////////////////////////////
             i++;
         }
         return "불러오기 성공";
