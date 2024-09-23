@@ -458,14 +458,21 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
                     if (true)//!isRoomOwner
                     {
                         GameObject obj = Instantiate(DataBaseScript.Instance.group, GameObject.Find("Canvas").transform);
-                        obj.GetComponent<Makemunja>().Getnayung(Message.Split(":")[2], 
-                            Message.Split(":")[3], 
-                            Message.Split(":")[4], 
-                            Message.Split(":")[5], 
-                            Message.Split(":")[6], 
-                            Message.Split(":")[7], //여기 분배 다시 해야함.....
-                            Message.Split(":")[8],
-                            Message.Split(":")[9]);
+                        var msg = Message.Split(":")[2];
+                        print(msg);
+                        //다음 문제의 답을 선택하십시오$6 DIVIDE  2(1+2)=?$1$0.3$4$2$7$1$2
+                        print(msg.Split("$")[0]);
+                        //다음 문제의 답을 선택하십시오$6 DIVIDE  2(1+2)=?$1$0.3$4$2$7$1$2
+                        obj.GetComponent<Makemunja>().Getnayung(
+                            msg.Split("$")[0], 
+                            msg.Split("$")[1], 
+                            msg.Split("$")[2], 
+                            msg.Split("$")[3], 
+                            msg.Split("$")[4], 
+                            msg.Split("$")[5], //여기 분배 다시 해야함..... ':' -> '$'
+                            msg.Split("$")[6],
+                            msg.Split("$")[7],
+                            msg.Split("$")[8]);
 
                     }
 

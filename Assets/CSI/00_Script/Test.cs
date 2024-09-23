@@ -21,14 +21,15 @@ public class Test : MonoBehaviour
     public void munjeaSend()
     {
         ++count;
-        global::SendMessage.Instance.SentMessage("Munjea",$"{DataBaseScript.Instance.siteData[count,0]}:" +
-                                                          $"{DataBaseScript.Instance.siteData[count,1]}:" +
-                                                          $"{DataBaseScript.Instance.siteData[count,2]}:" +
-                                                          $"{DataBaseScript.Instance.siteData[count,3]}:" +
-                                                          $"{DataBaseScript.Instance.siteData[count,4]}:" +
-                                                          $"{DataBaseScript.Instance.siteData[count,5]}:" +
-                                                          $"{DataBaseScript.Instance.siteData[count,6]}:" +
-                                                          $"{DataBaseScript.Instance.siteData[count,7]}");
+        global::SendMessage.Instance.SentMessage("Munjea",$"{DataBaseScript.Instance.siteData[count,0]}$" +
+                                                          $"{DataBaseScript.Instance.siteData[count,1]}$" +
+                                                          $"{DataBaseScript.Instance.siteData[count,2]}$" +
+                                                          $"{DataBaseScript.Instance.siteData[count,3]}$" +
+                                                          $"{DataBaseScript.Instance.siteData[count,4]}$" +
+                                                          $"{DataBaseScript.Instance.siteData[count,5]}$" +
+                                                          $"{DataBaseScript.Instance.siteData[count,6]}$" +
+                                                          $"{DataBaseScript.Instance.siteData[count,7]}$" +
+                                                          $"{DataBaseScript.Instance.siteData[count,8]}");
     
         
     }

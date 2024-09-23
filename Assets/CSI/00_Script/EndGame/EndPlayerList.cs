@@ -9,6 +9,7 @@ public class EndPlayerList : MonoBehaviour
 {
     public GameObject Main;
     private int Indx;
+    private float ShowTime = 1.5f;
     private void Start()
     {
         StartCoroutine(WaitAndPrint(3.5f,Indx));
@@ -36,7 +37,12 @@ public class EndPlayerList : MonoBehaviour
         {
             ++idx;
             print(DataBaseScript.Instance.List[idx].Name);
-            StartCoroutine(WaitAndPrint(1.5f,++Indx));
+            ShowTime -= 0.2f;
+            if (ShowTime < 0)
+            {
+                ShowTime = 0f;
+            }
+            StartCoroutine(WaitAndPrint(ShowTime,++Indx));
 
         }
         catch

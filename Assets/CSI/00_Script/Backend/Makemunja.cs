@@ -16,6 +16,7 @@ public class
     [SerializeField]private Button 택1,택2,택3,택4,택5;
     [SerializeField] private AudioClip error, succecClip;
     private AudioSource _audio;
+    private string Score;
 
     private void Awake()
     {
@@ -28,7 +29,7 @@ public class
     }
 
     private string successSave;
-    public void Getnayung(string N, string s, string t1, string t2, string t3, string t4, string t5, string success)
+    public void Getnayung(string N, string s, string t1, string t2, string t3, string t4, string t5, string success,string score = "0")
     {
         
         문제.text = N;
@@ -39,6 +40,7 @@ public class
         택4.GetComponentInChildren<TextMeshProUGUI>().text = t4;
         택5.GetComponentInChildren<TextMeshProUGUI>().text = t5;
         successSave = success;
+        Score = score;
     }
 
     public void chackjangdap()
@@ -50,6 +52,9 @@ public class
             _audio.Play();
             clickobj.GetComponent<Image>().DOColor(Color.green, 0.5f).OnComplete(()=> clickobj.GetComponent<Image>().DOColor(Color.white, 0.3f));
             gameObject.transform.DOMoveY(gameObject.transform.position.y + 10, 0.8f, false).SetEase(Ease.OutQuad).OnComplete((() => Destroy(gameObject)));
+            DataBaseScript.Instance.NowPoint += int.Parse(Score);
+
+            global::SendMessage.Instance.SentMessage("GetPoint",DataBaseScript.Instance.NowPoint.ToString());
         }
         else
         {

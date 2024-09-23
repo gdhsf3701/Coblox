@@ -1,22 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class DiceGague : MonoBehaviour
 {
     private readonly int GRADE = 12;
-    [SerializeField] private Transform center;   // ¿øÀÇ Áß½É
+    [SerializeField] private Transform center;   // ì›ì˜ ì¤‘ì‹¬
+    [SerializeField] private TextMeshProUGUI GoolText;
+    [SerializeField] private float speed = 3f;   // ë˜‘ë”± ìŠ¤í”¼ë“œ
+    [SerializeField] private Transform visual;   // ë˜‘ë”±ê±°ë¦¬ëŠ” ì˜¤ë¸Œì íŠ¸
 
-    [SerializeField] private float speed = 3f;   // ¶Èµü ½ºÇÇµå
-    [SerializeField] private Transform visual;   // ¶Èµü°Å¸®´Â ¿ÀºêÁ§Æ®
+    [SerializeField] private GameObject graduation;   // ëˆˆê¸ˆ í”„ë¦¬íŒ¹
 
-    [SerializeField] private GameObject graduation;   // ´«±İ ÇÁ¸®ÆÕ
+    private bool isLeftMove;    // í˜„ì¬ ì™¼ìª½ìœ¼ë¡œ ê°€ê³ ìˆëŠ”ì§€ ì•„ë‹Œì§€
+    private float curAngle;     // í˜„ì¬ ê°ë„
+    public float radius;        // ì›ì˜ ë°˜ì§€ë¦„
+    public float angle = 40;        // ë˜‘ë”±ê±°ë¦´ ìµœëŒ€ ê°ë„
 
-    private bool isLeftMove;    // ÇöÀç ¿ŞÂÊÀ¸·Î °¡°íÀÖ´ÂÁö ¾Æ´ÑÁö
-    private float curAngle;     // ÇöÀç °¢µµ
-    public float radius;        // ¿øÀÇ ¹İÁö¸§
-    public float angle = 40;        // ¶Èµü°Å¸± ÃÖ´ë °¢µµ
-
+    public int Gool;
+    
     private bool isPlaying = true;
     public bool IsPlaying
     {
@@ -25,8 +28,11 @@ public class DiceGague : MonoBehaviour
         {
             if (value)
             {
-                // ÃÊ±âÈ­ÇÏ¸ç ½ÃÀÛ
+                // ì´ˆê¸°í™”í•˜ë©° ì‹œì‘
                 curAngle = -angle;
+                Gool = Random.Range(1,12);
+                GoolText.text = Gool.ToString();
+                print(Gool);
             }
             else
             {
@@ -45,7 +51,7 @@ public class DiceGague : MonoBehaviour
         //angle = 90f - Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         print(angle);
 
-        // ´«±İ »ı¼º
+        // ëˆˆê¸ˆ ìƒì„±
         for (int i = 1; i < GRADE; i++)
         {
             GameObject newObj = Instantiate(graduation, transform);
@@ -63,7 +69,7 @@ public class DiceGague : MonoBehaviour
         {
             curAngle += Time.deltaTime * speed;
 
-            // °¢ ³¡¿¡ µµ´ŞÇßÀ» ¶§ ¹æÇâÀ» ¹Ù²Û´Ù
+            // ê° ëì— ë„ë‹¬í–ˆì„ ë•Œ ë°©í–¥ì„ ë°”ê¾¼ë‹¤
             if (curAngle > angle || curAngle < -angle)
             {
                 ChangeDirection(!isLeftMove);
@@ -74,7 +80,7 @@ public class DiceGague : MonoBehaviour
         }
     }
 
-    // ÇöÀç ¹æÇâÀ» ¹Ù²Ù´Â ÇÔ¼ö
+    // í˜„ì¬ ë°©í–¥ì„ ë°”ê¾¸ëŠ” í•¨ìˆ˜
     private void ChangeDirection(bool isLeftMove)
     {
         this.isLeftMove = isLeftMove;
@@ -87,7 +93,7 @@ public class DiceGague : MonoBehaviour
         speed *= -1;
     }
 
-    // ÇöÀç angleÀÇ ¹æÇâ
+    // í˜„ì¬ angleì˜ ë°©í–¥
     private Vector3 GetDirection(float angle)
     {
         Vector3 direction = Vector3.zero;
@@ -97,21 +103,46 @@ public class DiceGague : MonoBehaviour
         return direction;
     }
 
-    // ÇöÀç angleÀÇ À§Ä¡
+    // í˜„ì¬ angleì˜ ìœ„ì¹˜
     private Vector3 GetPos(float angle)
     {
         return center.position + GetDirection(angle) * radius;
     }
 
-    // µî±Ş(´Ü°è) ÆÇ´Ü ÇÔ¼ö
+    // ë“±ê¸‰(ë‹¨ê³„) íŒë‹¨ í•¨ìˆ˜
     private void CaculateGrade()
     {
         float rate = (curAngle + angle) / (angle * 2f);
-        // -angleºÎÅÍ angle±îÁö curAngleÀÇ ºñÀ²
+        // -angleë¶€í„° angleê¹Œì§€ curAngleì˜ ë¹„ìœ¨
 
-        // 1~GRADE±îÁö ´Ü°è°¡ ³ª¿Â´Ù
-        // 0ºÎÅÍ ½ÃÀÛÇÏ¹Ç·Î 1À» ´õÇØÁÜ
+        // 1~GRADEê¹Œì§€ ë‹¨ê³„ê°€ ë‚˜ì˜¨ë‹¤
+        // 0ë¶€í„° ì‹œì‘í•˜ë¯€ë¡œ 1ì„ ë”í•´ì¤Œ
         int grade = (int)(rate / (1 / (float)GRADE)) + 1;
-        Debug.Log($"{grade}´Ü°è");
+        if (Mathf.Abs(Gool - grade) == 0)
+        {
+            print("ì™„ë²½");
+            GoolText.text = "ì™„ë²½";
+
+        }else if (Mathf.Abs(Gool - grade) == 1)
+        {
+            print("ì•„ì‰½");
+            GoolText.text = "ì•„ì‰½";
+
+        }
+        else
+        {
+            print("í—ˆì ‘");
+            GoolText.text = "í—ˆì ‘";
+
+        }
+        Debug.Log($"{grade}ë‹¨ê³„");
+        StartCoroutine(Cooldown(3f));
+    }
+
+    private IEnumerator Cooldown(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        if(!IsPlaying)
+            IsPlaying = true;
     }
 }

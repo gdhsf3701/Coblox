@@ -32,7 +32,6 @@ public class Timer : MonoBehaviour
             {
                 timeRemaining -= Time.deltaTime;
                 slider.value = timeRemaining;
-                print(timeRemaining/DataBaseScript.Instance.Time*100);
                 if (DataBaseScript.Instance.Time%100 < timeRemaining)
                 {
                     FillIm.color = new Color(Mathf.Lerp(0, 242, Time.deltaTime),255,255);
