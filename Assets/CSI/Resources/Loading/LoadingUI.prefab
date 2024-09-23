@@ -183,6 +183,7 @@ GameObject:
   - component: {fileID: 355722426925387827}
   - component: {fileID: 7507611142788869613}
   - component: {fileID: 6312258313056166197}
+  - component: {fileID: 5159413763976331503}
   m_Layer: 5
   m_Name: LoadingUI
   m_TagString: Untagged
@@ -270,6 +271,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5159413763976331503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8445206884311772339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bab63322826c881448c81f6236c64067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8036965421914856709
 PrefabInstance:
   m_ObjectHideFlags: 0
