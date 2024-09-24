@@ -67,7 +67,7 @@ public class Login : MonoBehaviour
             Text.text = "로그인중...";
         
             Backend.BMember.CreateNickname(nicknamel.text);
-            var gild = Backend.Guild.GetMyGuildInfoV3();
+            /*var gild = Backend.Guild.GetMyGuildInfoV3();
             if (gild.IsSuccess())
             {
                 DataBaseScript.Instance.inGuild = true;
@@ -75,7 +75,7 @@ public class Login : MonoBehaviour
             else
             {
                 print("길드 불러오기 실패");
-            }
+            }*/
             TeamSellct.SetActive(true);
             DataBaseScript.Instance.NicName = nicknamel.text;
             DataBaseScript.Instance.UID = Backend.UID;
@@ -158,7 +158,7 @@ public class Login : MonoBehaviour
         var login = Backend.BMember.CustomLogin(ID.text, PW.text);
         if (login.IsSuccess())
         {
-            if (Backend.UserNickName == "Admin")
+            /*if (Backend.UserNickName == "Admin")
             {
                 var lists = Backend.Guild.GetApplicantsV3();
                 for (int i = 0; i < lists.FlattenRows().Count; i++)
@@ -169,7 +169,7 @@ public class Login : MonoBehaviour
                 }
 
 
-            }
+            }*/
         }
         else
         {
@@ -179,7 +179,7 @@ public class Login : MonoBehaviour
 
     }
 
-    private void Update()
+    /*private void Update()
     {
         if (Input.GetKeyDown(KeyCode.G))
         {
@@ -207,6 +207,6 @@ public class Login : MonoBehaviour
                 print(a.ErrorCode);
             }
         }
-    }
+    }*/
 
 }

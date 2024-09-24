@@ -6,20 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="fc64a87f-2c70-4f09-a57a-13b8de8dcdeb" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/ALLSCREEN/DataBaseScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/ALLSCREEN/DataBaseScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/Backend/Makemunja.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/Backend/Makemunja.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/Backend/ResetBackend.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/Backend/ResetBackend.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/Backend/SetImage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/Backend/SetImage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/Chat/ChatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/Chat/ChatManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/EndGame/EndPlayerList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/EndGame/EndPlayerList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/InGame/Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/InGame/Timer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/Test.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/02_LoginorSighUP.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/02_LoginorSighUP.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/03_1_Teacher.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/03_1_Teacher.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/03_2_StudentJoinRoom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/03_2_StudentJoinRoom.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/04_1_TeathcerInGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/04_1_TeathcerInGame.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/Font/Cafe24Ssurround-v2.0/Cafe24Ssurround-v2.0/Cafe24Ssurround-v2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/Font/Cafe24Ssurround-v2.0/Cafe24Ssurround-v2.0/Cafe24Ssurround-v2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KAY/DiceGague.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KAY/DiceGague.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/LoginOrSight/Login.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/LoginOrSight/Login.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/StartPy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/StartPy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CSI/TheBackend/Plugins/Backend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/TheBackend/Plugins/Backend.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +18,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/CSI/00_Script/MiniGaem/View_MiniGame.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
@@ -43,7 +36,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;CSI__Home__PC&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;CSI&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -62,7 +55,7 @@
 }</component>
   <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.20f1-x86_64\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.20f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\UNITY\Git\Coblox -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\UNITY\Git\Coblox" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -78,7 +71,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unity 시작" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.20f1-x86_64\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.20f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath D:\UNITY\Git\Coblox -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\UNITY\Git\Coblox" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -128,6 +121,10 @@
       <workItem from="1727049932541" duration="4816000" />
       <workItem from="1727071040740" duration="1478000" />
       <workItem from="1727084477873" duration="3067000" />
+      <workItem from="1727101432612" duration="3584000" />
+      <workItem from="1727152999563" duration="1183000" />
+      <workItem from="1727170345406" duration="1039000" />
+      <workItem from="1727187050944" duration="1918000" />
     </task>
     <servers />
   </component>

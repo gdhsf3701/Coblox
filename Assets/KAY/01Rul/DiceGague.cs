@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DiceGague : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class DiceGague : MonoBehaviour
     [SerializeField] private Transform visual;   // 똑딱거리는 오브젝트
 
     [SerializeField] private GameObject graduation;   // 눈금 프리팹
+    [SerializeField] private GameObject[] slideBayell;
 
     private bool isLeftMove;    // 현재 왼쪽으로 가고있는지 아닌지
     private float curAngle;     // 현재 각도
@@ -32,6 +34,24 @@ public class DiceGague : MonoBehaviour
                 curAngle = -angle;
                 Gool = Random.Range(1,12);
                 GoolText.text = Gool.ToString();
+                foreach (var slide in slideBayell)
+                {
+                    slide.GetComponent<Image>().color = Color.black;
+                }
+                if (Gool == 1)
+                {
+                    slideBayell[Gool-1].GetComponent<Image>().color = Color.cyan;
+                }
+                else if(Gool == 12)
+                {
+                    slideBayell[Gool-2].GetComponent<Image>().color = Color.cyan;
+                    
+                }
+                else
+                {
+                    slideBayell[Gool-1].GetComponent<Image>().color = Color.cyan;
+                    slideBayell[Gool-2].GetComponent<Image>().color = Color.cyan;
+                }
                 print(Gool);
             }
             else
@@ -48,18 +68,17 @@ public class DiceGague : MonoBehaviour
         radius = Vector2.Distance(transform.position, center.position);
 
         Vector3 direction = transform.position - center.position;
-        //angle = 90f - Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         print(angle);
-
         // 눈금 생성
+        slideBayell = new GameObject[GRADE-1];
         for (int i = 1; i < GRADE; i++)
         {
             GameObject newObj = Instantiate(graduation, transform);
             newObj.transform.position = GetPos(-angle + (angle * 2 / GRADE) * i);
             newObj.transform.up = GetDirection(-angle + (angle * 2 / GRADE) * i);
             newObj.SetActive(true);
+            slideBayell[i-1] = newObj;
         }
-
         IsPlaying = true;
     }
 
@@ -136,7 +155,7 @@ public class DiceGague : MonoBehaviour
 
         }
         Debug.Log($"{grade}단계");
-        StartCoroutine(Cooldown(3f));
+        StartCoroutine(Cooldown(2f));
     }
 
     private IEnumerator Cooldown(float waitTime)
