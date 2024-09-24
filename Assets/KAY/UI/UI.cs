@@ -7,8 +7,9 @@ using UnityEngine.UIElements;
 public class UI : MonoBehaviour
 {
     private VisualElement _startUI;
-    private VisualElement _setting;
+
     private Button _Start;
+    private VisualElement _settingUI;
 
     private Button Setting;
 
@@ -20,6 +21,7 @@ public class UI : MonoBehaviour
         _Start = root.Q<Button>("Start");
         Setting = root.Q<Button>("Setting");
         close = root.Q<Button>("Close");
+        _settingUI = root.Q<VisualElement>("SettingChang");
 
         _Start.RegisterCallback<ClickEvent>(GameStart);
         Setting.RegisterCallback<ClickEvent>(OpenSetting);
@@ -32,7 +34,7 @@ public class UI : MonoBehaviour
     }
     private void OpenSetting(ClickEvent evt)
     {
-        Setting.style.display = DisplayStyle.Flex;
+        _settingUI.style.display = DisplayStyle.Flex;
     }
     private void Close(ClickEvent evt)
     {
