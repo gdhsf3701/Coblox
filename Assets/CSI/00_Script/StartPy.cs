@@ -5,6 +5,7 @@ using UnityEngine.Networking;
 using System.Collections;
 using System.Text;
 using System.Diagnostics;
+using System.IO;
 using DI = System.Diagnostics;
 
 
@@ -38,12 +39,26 @@ public class StartPy : MonoBehaviour
         {
             // 빌드본에서 실행 중일 때의 코드
         }
+        
         print(Application.dataPath);
         print(Application.dataPath + "\\Resource\\Start\\StartPy.exe");
+        var directoryPath = new DirectoryInfo(Application.dataPath + "/Resource/Start/");
+
+        if (directoryPath.Exists)
+        {
+            //File.Copy(@"원본파일 경로와 파일명", @"결과파일 경로와 파일명", true); //true는 덮어쓰기 허용, false는 허용안함.
+            string savedFilePath = "StartPy" + ".exe";
+            string AllPath = directoryPath + savedFilePath;
+            //Debug.Log(AllPath);
+            if (File.Exists(AllPath))
+            {
+                
+                Process.Start(Application.dataPath + "\\Resources\\Start\\StartPy.exe");
+            }
+        }
         //D:\빌드\shuhack_Git\Coblox_Data
-        Resources.Load("Start/StartPy");
+        //Resources.Load("Start/StartPy");
         //Process.Start(Application.dataPath.Replace("/","\\") + "\\Resources\\Start\\StartPy.exe");
-        Process.Start(Application.dataPath + "\\Resources\\Start\\StartPy.exe");
     }
 
     private void OnApplicationQuit()
