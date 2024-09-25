@@ -1,43 +1,64 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
-public class UI : MonoBehaviour
+public class SettingsUI : MonoBehaviour
 {
-    private VisualElement _startUI;
+    private VisualElement root;
+    private Slider effectSlider;
+    private Slider bgMusicSlider;
+    private Image soundIcon;
+    private Image bgMusicIcon;
 
-    private Button _Start;
-    private VisualElement _settingUI;
+    private const string soundEffectIconPath = "Assets/Images/sound_effect_icon.png";
+    private const string soundEffectMuteIconPath = "Assets/Images/sound_effect_mute_icon.png";
+    private const string bgMusicIconPath = "Assets/Images/background_music_icon.png";
+    private const string bgMusicMuteIconPath = "Assets/Images/background_music_mute_icon.png";
 
-    private Button Setting;
-
-    private Button close;
-
-    private void Start()
+    void OnEnable()
     {
-        var root = GetComponent<UIDocument>().rootVisualElement;
-        _Start = root.Q<Button>("Start");
-        Setting = root.Q<Button>("Setting");
-        close = root.Q<Button>("Close");
-        _settingUI = root.Q<VisualElement>("SettingChang");
+        root = GetComponent<UIDocument>().rootVisualElement;
 
-        _Start.RegisterCallback<ClickEvent>(GameStart);
-        Setting.RegisterCallback<ClickEvent>(OpenSetting);
-        close.RegisterCallback<ClickEvent>(Close);
+        // 슬라이더 및 이미지 요소 가져오기
+        effectSlider = root.Q<Slider>("effectSlider");
+        bgMusicSlider = root.Q<Slider>("bgMusicSlider");
+        soundIcon = root.Q<Image>("soundIcon");
+        bgMusicIcon = root.Q<Image>("bgMusicIcon");
+
+        // 슬라이더 이벤트 등록
+        effectSlider.RegisterValueChangedCallback(evt => UpdateSoundIcon(evt.newValue));
+        bgMusicSlider.RegisterValueChangedCallback(evt => UpdateBgMusicIcon(evt.newValue));
+
+        // 초기 아이콘 상태 설정
+        UpdateSoundIcon(effectSlider.value);
+        UpdateBgMusicIcon(bgMusicSlider.value);
     }
 
-    private void GameStart(ClickEvent evt)
+    private void UpdateSoundIcon(float value)
     {
-        SceneManager.LoadScene("02_LoginorSighUP");
+        if (value == 0)
+        {
+            soundIcon.image = LoadImageFromPath(soundEffectMuteIconPath); // 음소거 이미지
+        }
+        else
+        {
+            soundIcon.image = LoadImageFromPath(soundEffectIconPath); // 일반 효과음 이미지
+        }
     }
-    private void OpenSetting(ClickEvent evt)
+
+    private void UpdateBgMusicIcon(float value)
     {
-        _settingUI.style.display = DisplayStyle.Flex;
+        if (value == 0)
+        {
+            bgMusicIcon.image = LoadImageFromPath(bgMusicMuteIconPath); // 음소거 이미지
+        }
+        else
+        {
+            bgMusicIcon.image = LoadImageFromPath(bgMusicIconPath); // 일반 배경음 이미지
+        }
     }
-    private void Close(ClickEvent evt)
+
+    private Texture2D LoadImageFromPath(string path)
     {
-       Application.Quit();
+        return (Texture2D)Resources.Load(path);
     }
 }
