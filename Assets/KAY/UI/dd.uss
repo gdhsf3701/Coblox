@@ -1,0 +1,106 @@
+.StartButton {
+    position: absolute;
+    height: 140px;
+    width: 420px;
+    top: 590px;
+    left: 1430px;
+    -unity-font: url("project://database/Assets/CSI/Font/Cafe24Ssurround-v2.0/Cafe24Ssurround-v2.0/Cafe24Ssurround-v2.0.ttf?fileID=12800000&guid=6580acc9e91209d46a256dcc3dad905e&type=3#Cafe24Ssurround-v2.0");
+    -unity-font-definition: initial;
+    font-size: 80px;
+    color: rgb(255, 255, 255);
+    text-shadow: 14.6px 0 0 rgb(0, 0, 0);
+    background-color: rgb(255, 204, 156);
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-left-color: rgb(151, 104, 5);
+    border-right-color: rgb(151, 104, 5);
+    border-top-color: rgb(151, 104, 5);
+    border-bottom-color: rgb(151, 104, 5);
+    border-top-width: 20px;
+    border-right-width: 20px;
+    border-bottom-width: 20px;
+    border-left-width: 20px;
+    opacity: 0.91;
+}
+
+.StartButton:hover {
+    background-color: rgb(149, 119, 91);
+    -unity-text-outline-color: rgba(77, 77, 77, 0);
+}
+
+.SettingButton {
+    position: absolute;
+    width: 420px;
+    top: 760px;
+    left: 1430px;
+    -unity-font: url("project://database/Assets/CSI/Font/Cafe24Ssurround-v2.0/Cafe24Ssurround-v2.0/Cafe24Ssurround-v2.0.ttf?fileID=12800000&guid=6580acc9e91209d46a256dcc3dad905e&type=3#Cafe24Ssurround-v2.0");
+    -unity-font-definition: initial;
+    font-size: 80px;
+    color: rgb(255, 255, 255);
+    text-shadow: 14.6px 0 0 rgb(0, 0, 0);
+    background-color: rgb(255, 204, 156);
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-left-color: rgb(151, 104, 5);
+    border-right-color: rgb(151, 104, 5);
+    border-top-color: rgb(151, 104, 5);
+    border-bottom-color: rgb(151, 104, 5);
+    border-top-width: 20px;
+    border-right-width: 20px;
+    border-bottom-width: 20px;
+    border-left-width: 20px;
+    bottom: 176px;
+}
+
+.SettingButton:hover {
+    background-color: rgb(149, 119, 91);
+}
+
+.ClossButton:hover {
+    background-color: rgb(149, 119, 91);
+}
+
+.ClossButton {
+}
+
+.ClossButton:hover {
+    background-color: rgb(149, 119, 91);
+}
+
+.CloseButton {
+    position: absolute;
+    height: 140px;
+    width: 420px;
+    top: 930px;
+    left: 1430px;
+    -unity-font: url("project://database/Assets/CSI/Font/Cafe24Ssurround-v2.0/Cafe24Ssurround-v2.0/Cafe24Ssurround-v2.0.ttf?fileID=12800000&guid=6580acc9e91209d46a256dcc3dad905e&type=3#Cafe24Ssurround-v2.0");
+    -unity-font-definition: initial;
+    font-size: 80px;
+    color: rgb(255, 255, 255);
+    text-shadow: 14.6px 0 0 rgb(0, 0, 0);
+    background-color: rgb(255, 204, 156);
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-left-color: rgb(151, 104, 5);
+    border-right-color: rgb(151, 104, 5);
+    border-top-color: rgb(151, 104, 5);
+    border-bottom-color: rgb(151, 104, 5);
+    border-top-width: 20px;
+    border-right-width: 20px;
+    border-bottom-width: 20px;
+    border-left-width: 20px;
+}
+
+.CloseButton:hover {
+    background-color: rgb(149, 119, 91);
+}
+
+#SoundSlider Label {
+    font-size: 31px;
+}
