@@ -15,12 +15,10 @@ public class StartPy : MonoBehaviour
     public static StartPy Instance;
 
     private string url = "http://localhost:5000/api/CSIIMNIKASTART";
-    public bool Startbool;
-    
-   
     
     private void Awake()
     {
+        
         if (Instance == null)
         {
             Instance = this;
@@ -31,22 +29,13 @@ public class StartPy : MonoBehaviour
             Destroy(gameObject);
         }
         
-        if (Application.isEditor)
-        {
-            // 에디터에서 실행 중일 때의 코드
-        }
-        else
-        {
-            // 빌드본에서 실행 중일 때의 코드
-        }
         
         print(Application.dataPath);
         print(Application.dataPath + "\\Resource\\Start\\StartPy.exe");
-        var directoryPath = new DirectoryInfo(Application.dataPath + "/Resource/Start/");
+        var directoryPath = new DirectoryInfo(Application.dataPath + "/Resources/Start/");
 
         if (directoryPath.Exists)
         {
-            //File.Copy(@"원본파일 경로와 파일명", @"결과파일 경로와 파일명", true); //true는 덮어쓰기 허용, false는 허용안함.
             string savedFilePath = "StartPy" + ".exe";
             string AllPath = directoryPath + savedFilePath;
             //Debug.Log(AllPath);
@@ -56,23 +45,18 @@ public class StartPy : MonoBehaviour
                 Process.Start(Application.dataPath + "\\Resources\\Start\\StartPy.exe");
             }
         }
-        //D:\빌드\shuhack_Git\Coblox_Data
-        //Resources.Load("Start/StartPy");
-        //Process.Start(Application.dataPath.Replace("/","\\") + "\\Resources\\Start\\StartPy.exe");
+
     }
 
     private void OnApplicationQuit()
     {
         Disable_Py();
+        //게임 중지때 StartPy 중지
     }
 
     void Start()
     {
-        string single_param = "9-3 DIVIDE  {1} over {3}+1=?";
-        
-        StartCoroutine(CallPythonScript(single_param));
         print("실행");
-
     }
 
     public void Disable_Py()
@@ -95,14 +79,6 @@ public class StartPy : MonoBehaviour
             print("실행된 프로세스 없음");
         }
     }
-    private void Update()
-    {
-        if (Startbool)
-        {
-            Startbool = false;
-            Disable_Py();
-        }
-    }
 
 
     [System.Serializable]
@@ -110,32 +86,6 @@ public class StartPy : MonoBehaviour
     {
         public string param;
     }
-    IEnumerator CallPythonScript(string single_param)
-    {
-        
-        RequestData requestData = new RequestData { param = single_param };
-        string json = JsonUtility.ToJson(requestData);
-        // json에서 'param' 키가 들어간 것을 확인하세요.
-        print($"Sending JSON data: {json}");
-        using UnityWebRequest request = new UnityWebRequest(url, "POST");
-        byte[] bodyRaw = Encoding.UTF8.GetBytes(json);
-        request.uploadHandler = new UploadHandlerRaw(bodyRaw);
-        request.downloadHandler = new DownloadHandlerBuffer(); 
-        request.SetRequestHeader("Content-Type", "application/json");
-        
-        yield return request.SendWebRequest();
-        
-        if (request.result == UnityWebRequest.Result.ConnectionError)
-        {
-            print("Error: " + request.error);
-        }
-        else
-        {
-            print(request.downloadHandler.text.Replace("\\\\", "\\").Replace("\"",""));
-            print("Received: " + request.downloadHandler.text);
-        }
-    }
-    
-    
+
 
 }

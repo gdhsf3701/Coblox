@@ -1059,7 +1059,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3855fe97227b4e18a8dc7d9e164bc8ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Startbool: 0
 --- !u!4 &1846990789
 Transform:
   m_ObjectHideFlags: 0
@@ -1157,11 +1156,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11414302, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_Size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11414302, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_Value
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22331464, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 22400762, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_AnchoredPosition.y
