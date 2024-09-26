@@ -3,12 +3,9 @@ using System.Collections;
 using System.Text;
 
 using TexDrawLib;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Networking;
-using UnityEngine.Rendering;
 
-using UnityEngine.UI;
 
 public class SetImage : MonoBehaviour
 {
@@ -164,33 +161,15 @@ public class SetImage : MonoBehaviour
         StartCoroutine(CallPythonScript(susick, s =>
         {
             susick = s;
-            print(susick);
             susick = changetext(susick);
             _tex.text = susick;
         }));
-        /*susick = changetext(susick);
-        if (susick.Contains("over"))
-        {
 
 
-            susick = Fracmanage(susick);
-        }*/
-
-
-        /*var url = $"https://latex.codecogs.com/png.image?\\huge&space;\\dpi{{500}}{susick}";
-        UnityWebRequest www = UnityWebRequestTexture.GetTexture(url);
-        yield return www.SendWebRequest();
-        if (www.result != UnityWebRequest.Result.Success)
-        {
-            Debug.Log(www.error);
-        }
-        else
-        {
-            Texture2D img =((DownloadHandlerTexture)www.downloadHandler).texture;
-            _image.transform.localScale = new Vector3(img.width,img.height);
-            _image.texture = img;
-        }*/
     }
 
-
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        GameObject.Find("Canvas").transform.Find("TEXDraw").GetComponent<SetImage>().GetTexture("{3} over {2}"/*한글 파일 수식*/);
+    }
 }

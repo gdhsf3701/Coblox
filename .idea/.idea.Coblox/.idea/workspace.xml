@@ -6,10 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="fc64a87f-2c70-4f09-a57a-13b8de8dcdeb" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/LoginOrSight/Login.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/LoginOrSight/Login.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/Backend/SetImage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/Backend/SetImage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/LoginOrSight/Enable_UI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/LoginOrSight/Enable_UI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/LoginOrSight/SellectTeam.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/LoginOrSight/SellectTeam.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/StartPy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/StartPy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/TheBackend/Plugins/Backend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/TheBackend/Plugins/Backend.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/01_Start.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/01_Start.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/02_LoginorSighUP.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/02_LoginorSighUP.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/03_2_StudentJoinRoom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/03_2_StudentJoinRoom.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CSI/04_Animation/LoginOrSighup/LiseUp/LiseUp.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/04_Animation/LoginOrSighup/LiseUp/LiseUp.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CSI/04_Animation/LoginOrSighup/LiseUp/lisupStart.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/04_Animation/LoginOrSighup/LiseUp/lisupStart.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +26,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/CSI/00_Script/Build_Start.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CSI/00_Script/MiniGaem/View_MiniGame.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CSI/00_Script/Sounds/ObjectPool/PoolManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestLaunchers/PlayerLauncher.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestLaunchers/PlayerLauncherBuildOptions.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
@@ -36,7 +46,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;CSI&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Base&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -63,7 +73,7 @@
       <method v="2" />
     </configuration>
     <configuration name="독립실행형 플레이어" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../빌드/shuhack_Git/Coblox.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../Build/shuhack_Git/Coblox.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="D:\빌드\shuhack_Git" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -125,6 +135,13 @@
       <workItem from="1727152999563" duration="1183000" />
       <workItem from="1727170345406" duration="1039000" />
       <workItem from="1727187050944" duration="1918000" />
+      <workItem from="1727190623040" duration="5232000" />
+      <workItem from="1727222383402" duration="3039000" />
+      <workItem from="1727244947146" duration="799000" />
+      <workItem from="1727248588836" duration="1446000" />
+      <workItem from="1727274869084" duration="1688000" />
+      <workItem from="1727336741886" duration="810000" />
+      <workItem from="1727359643804" duration="5811000" />
     </task>
     <servers />
   </component>

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -6,6 +7,13 @@ using UnityEngine.SceneManagement;
 
 public class SellectTeam : MonoBehaviour
 {
+    [SerializeField] private Enable_UI MainUI;
+    
+    private void OnEnable()
+    {
+        MainUI.SetEnableBt(false);
+    }
+
     public void SellectT()
     {
         global::DataBaseScript.Instance.teacher = true;
