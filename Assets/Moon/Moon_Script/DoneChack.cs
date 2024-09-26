@@ -7,6 +7,7 @@ public class DoneChack : MonoBehaviour
 {
     [SerializeField] Plate plate;
     bool done = true;
+    private bool andyunsan = true;
     public void ClickGoopGi()
     {
         for(int i = 0; i < plate.elemental.Length; i++)
@@ -21,9 +22,20 @@ public class DoneChack : MonoBehaviour
                 break;
             }
         }
-        if(done)
+        if(done&&andyunsan)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+            andyunsan = false;
+            //점수증가
         }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+    }
+    public void ClickCooking()
+    {
+        if (plate.DoneCheck()&&andyunsan)
+        {
+            andyunsan = false;
+            //점수증가
+        }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
