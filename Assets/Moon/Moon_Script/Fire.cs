@@ -61,9 +61,8 @@ public class Fire : MonoBehaviour
         if(lastTime <= 0.5f && lastTime >= 0f && andyunsan)
         {
             andyunsan = false;
-            //점수증가
+            GameManager.Instance.Score += 300;
         }
-        Destroy(game);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

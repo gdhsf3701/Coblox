@@ -25,7 +25,7 @@ public class DoneChack : MonoBehaviour
         if(done&&andyunsan)
         {
             andyunsan = false;
-            //점수증가
+            GameManager.Instance.Score += 300;
         }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
@@ -34,7 +34,7 @@ public class DoneChack : MonoBehaviour
         if (plate.DoneCheck()&&andyunsan)
         {
             andyunsan = false;
-            //점수증가
+            GameManager.Instance.Score += 400;
         }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }

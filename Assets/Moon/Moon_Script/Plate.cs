@@ -77,10 +77,6 @@ public class Plate : MonoBehaviour
             }
         }
     }
-    public void ChangeGoopGi()
-    {
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
-    }
     public bool DoneCheck()
     {
         foreach(var item in doneCheck)
