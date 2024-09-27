@@ -177,7 +177,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3959424247256408940, guid: 1a7f74ee21c46e54cbee7d1f4f3a19b5, type: 3}
       propertyPath: m_text
-      value: "ID : \nPW :\nNICNAME : "
+      value: "ID : \nPW :\nNICKNAME : "
+      objectReference: {fileID: 0}
+    - target: {fileID: 3959424247256408940, guid: 1a7f74ee21c46e54cbee7d1f4f3a19b5, type: 3}
+      propertyPath: m_fontSize
+      value: 60.4
       objectReference: {fileID: 0}
     - target: {fileID: 3959424247256408940, guid: 1a7f74ee21c46e54cbee7d1f4f3a19b5, type: 3}
       propertyPath: m_margin.x
@@ -187,6 +191,10 @@ PrefabInstance:
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: e754723bc02a21447b88b3963231da50, type: 2}
+    - target: {fileID: 3959424247256408940, guid: 1a7f74ee21c46e54cbee7d1f4f3a19b5, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 60.4
+      objectReference: {fileID: 0}
     - target: {fileID: 3959424247256408940, guid: 1a7f74ee21c46e54cbee7d1f4f3a19b5, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -361,7 +369,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8810542782835550042, guid: 1a7f74ee21c46e54cbee7d1f4f3a19b5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 240.00002
+      value: 228.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1353,7 +1361,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1197673543480730345, guid: 5dae009c258e08146b38f3546807536c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 240
+      value: 228.8
       objectReference: {fileID: 0}
     - target: {fileID: 1323031854679555901, guid: 5dae009c258e08146b38f3546807536c, type: 3}
       propertyPath: m_fontAsset
@@ -1493,7 +1501,11 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: e754723bc02a21447b88b3963231da50, type: 2}
     - target: {fileID: 4137249859895775549, guid: 5dae009c258e08146b38f3546807536c, type: 3}
       propertyPath: m_text
-      value: "ID : \nPW :\nNICNAME : "
+      value: "ID : \nPW :\nNICKNAME : "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4137249859895775549, guid: 5dae009c258e08146b38f3546807536c, type: 3}
+      propertyPath: m_fontSize
+      value: 61.85
       objectReference: {fileID: 0}
     - target: {fileID: 4137249859895775549, guid: 5dae009c258e08146b38f3546807536c, type: 3}
       propertyPath: m_margin.x
@@ -1507,6 +1519,10 @@ PrefabInstance:
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: e754723bc02a21447b88b3963231da50, type: 2}
+    - target: {fileID: 4137249859895775549, guid: 5dae009c258e08146b38f3546807536c, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 61.85
+      objectReference: {fileID: 0}
     - target: {fileID: 4137249859895775549, guid: 5dae009c258e08146b38f3546807536c, type: 3}
       propertyPath: m_sharedMaterial
       value: 

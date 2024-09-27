@@ -892,7 +892,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Alignment: {x: 0.5, y: 0.5}
-  m_Text: asd\sum \prod_{1}^{3}
+  m_Text: "\uC218\uC2DD \uB85C\uB529\uC911.."
   m_Size: 99.38
   m_ScrollArea:
     serializedVersion: 2

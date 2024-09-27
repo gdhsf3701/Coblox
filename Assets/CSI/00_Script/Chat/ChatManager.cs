@@ -136,7 +136,12 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
     }
 
 
-    public async void GameStart_BT()
+    public void GameStart_BT()//*TImer 는 초 기준*//
+    {
+        Send_GameStart();
+    }
+
+    public async void Send_GameStart(int Timer = 90)
     {
         if (isRoomOwner)
         {
@@ -147,7 +152,7 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
 
             SendChat("Teacher",Backend.UserNickName);
             await Wait(1200);
-            SendChat("StartGame","90");//초 기준
+            SendChat("StartGame",Timer.ToString());//초 기준
         }
         else
         {
@@ -158,7 +163,6 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
             print("권환이 없습니다.");
         }
     }
-
 
 
 

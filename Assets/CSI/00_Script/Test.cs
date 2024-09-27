@@ -20,7 +20,6 @@ public class Test : MonoBehaviour
 
     public void munjeaSend()
     {
-        ++count;
         global::SendMessage.Instance.SentMessage("Munjea",$"{DataBaseScript.Instance.siteData[count,0]}$" +
                                                           $"{DataBaseScript.Instance.siteData[count,1]}$" +
                                                           $"{DataBaseScript.Instance.siteData[count,2]}$" +
@@ -32,6 +31,7 @@ public class Test : MonoBehaviour
                                                           $"{DataBaseScript.Instance.siteData[count,8]}");
     
         
+        count++;
     }
 
     private void Start()
