@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc64a87f-2c70-4f09-a57a-13b8de8dcdeb" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/Backend/SetImage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/Backend/SetImage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/LoginOrSight/Enable_UI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/LoginOrSight/Enable_UI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/LoginOrSight/SellectTeam.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/LoginOrSight/SellectTeam.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/LoginOrSight/Login.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/LoginOrSight/Login.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/StartPy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/StartPy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/01_Start.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/01_Start.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/02_LoginorSighUP.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/02_LoginorSighUP.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/03_2_StudentJoinRoom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/03_2_StudentJoinRoom.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/04_Animation/LoginOrSighup/LiseUp/LiseUp.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/04_Animation/LoginOrSighup/LiseUp/LiseUp.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/04_Animation/LoginOrSighup/LiseUp/lisupStart.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/04_Animation/LoginOrSighup/LiseUp/lisupStart.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +21,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/CSI/00_Script/ALLSCREEN/DataBaseScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CSI/00_Script/Build_Start.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CSI/00_Script/Chat/ChatManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CSI/00_Script/MiniGaem/View_MiniGame.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CSI/00_Script/Sounds/ObjectPool/PoolManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/UNITY/Git/Coblox/Assets/CSI/00_Script/StartPy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/UNITY/Git/Coblox/Assets/CSI/00_Script/StartPy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/UNITY/Git/Coblox/Assets/CSI/00_Script/StartPy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestLaunchers/PlayerLauncher.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestLaunchers/PlayerLauncherBuildOptions.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -46,7 +46,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Base&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;CSI&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -65,7 +65,7 @@
 }</component>
   <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.20f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.20f1-x86_64\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\UNITY\Git\Coblox -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\UNITY\Git\Coblox" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -81,7 +81,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unity 시작" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.20f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.20f1-x86_64\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath D:\UNITY\Git\Coblox -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\UNITY\Git\Coblox" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -142,6 +142,8 @@
       <workItem from="1727274869084" duration="1688000" />
       <workItem from="1727336741886" duration="810000" />
       <workItem from="1727359643804" duration="5811000" />
+      <workItem from="1727367312603" duration="1285000" />
+      <workItem from="1727390196988" duration="2768000" />
     </task>
     <servers />
   </component>
