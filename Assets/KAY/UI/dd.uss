@@ -104,3 +104,29 @@
 #SoundSlider Label {
     font-size: 31px;
 }
+
+#SoundSlider #unity-dragger {
+    width: 40px;
+    height: 40px;
+    border-top-left-radius: 28px;
+    border-top-right-radius: 28px;
+    border-bottom-right-radius: 28px;
+    border-bottom-left-radius: 28px;
+    top: 7px;
+    left: -6px;
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
+}
+
+#SoundSlider #unity-drag-container {
+    width: 171px;
+    height: 30px;
+}
+
+#SoundSlider #unity-tracker {
+    width: 680px;
+    height: 1px;
+    top: 1px;
+}
