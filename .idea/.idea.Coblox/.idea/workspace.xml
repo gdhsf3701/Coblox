@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc64a87f-2c70-4f09-a57a-13b8de8dcdeb" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/ALLSCREEN/DataBaseScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/ALLSCREEN/DataBaseScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/Chat/ChatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/Chat/ChatManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Moon/Moon_Script/DoneChack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Moon/Moon_Script/DoneChack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Moon/Moon_Script/Fire.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Moon/Moon_Script/Fire.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Moon/Moon_Script/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Moon/Moon_Script/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Moon/Moon_Script/Plate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Moon/Moon_Script/Plate.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -144,6 +139,8 @@
       <workItem from="1727447894432" duration="1042000" />
       <workItem from="1727520105560" duration="447000" />
       <workItem from="1727520640088" duration="2021000" />
+      <workItem from="1727530247983" duration="309000" />
+      <workItem from="1727531984691" duration="517000" />
     </task>
     <servers />
   </component>

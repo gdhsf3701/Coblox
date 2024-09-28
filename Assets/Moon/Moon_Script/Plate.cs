@@ -1,12 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
 using TMPro;
-using TMPro;
-using UnityEngine.SceneManagement;
-using System;
+using System.Collections.Generic;
 
 public class Plate : MonoBehaviour
 {
@@ -44,7 +38,35 @@ public class Plate : MonoBehaviour
         NowElemental = -1;
         if(elemental != null)
         {
-            string k = DataBase.In
+            var munjealist = DataBaseScript.Instance.Munjea;
+            
+            string k = munjealist[0].N;
+            int i = Random.Range(0, elemental.Length);
+
+            switch (munjealist[0].success)
+            {
+                case "1":
+                    elementalWant[i] = int.Parse(munjealist[0].t1);
+                    break;
+                case "2":
+                    elementalWant[i] = int.Parse(munjealist[0].t2);
+                    break;
+                case "3":
+                    elementalWant[i] = int.Parse(munjealist[0].t3);
+                    break;
+                case "4":
+                    elementalWant[i] = int.Parse(munjealist[0].t4);
+                    break;
+                case "5":
+                    elementalWant[i] = int.Parse(munjealist[0].t5);
+                    break;
+
+                default:
+                    print("에러");
+                    break;
+            }
+            text.text = $"{elemental[i]}:{k}";
+
             //string k = 문제 식;
             //int i = Random.Range(0, elemental.Length);여러가지 재료중 1 택
             //int j = 문제 답;
