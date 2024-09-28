@@ -50,6 +50,7 @@ public class GameManager : MonoBehaviour
     public void TimeOver()
     {
         //총합점수 보내기
+        Destroy(gameObject);
         //메인화면으로 이동SceneManager.LoadScene();
     }
 }

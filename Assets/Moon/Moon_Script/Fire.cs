@@ -64,6 +64,7 @@ public class Fire : MonoBehaviour
             GameManager.Instance.Score += 300;
         }
         //총합점수 보내기
+        Destroy(GameManager.Instance.gameObject);
         //메인화면으로 이동SceneManager.LoadScene();
     }
 }
