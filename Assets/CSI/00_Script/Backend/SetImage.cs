@@ -67,7 +67,7 @@ public class SetImage : MonoBehaviour
         susick = susick.Replace("RIGHT ", "\\right\\");//이중 괄호
         susick = susick.Replace("vert", "|");//절대값
         susick = susick.Replace("ATT", "\\circledast");//주의
-        
+        susick = susick.Replace("^ ", "^");//버그 수정
         
         //부호
         
@@ -80,6 +80,7 @@ public class SetImage : MonoBehaviour
 
         
         //최종 빈칸 삭제
+        susick = susick.Replace(" ", "");
 
         return susick;
     }

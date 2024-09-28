@@ -23,7 +23,7 @@ public class DoneChack : MonoBehaviour
             }
         }
         if(done&&andyunsan)
-        {
+        {   
             andyunsan = false;
             GameManager.Instance.Score += 300;
         }

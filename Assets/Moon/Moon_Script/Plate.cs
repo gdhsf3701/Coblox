@@ -129,4 +129,5 @@ public class Plate : MonoBehaviour
             Dow.sprite= dowSprite[nowElemental];
         }
     }
+
 }

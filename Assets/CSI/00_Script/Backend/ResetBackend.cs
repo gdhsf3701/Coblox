@@ -29,13 +29,13 @@ public class BackendManager : MonoBehaviour
         catch 
         {
             print("에러");
-            return $"{fileId}의 값을 다시 한번 확인해 주세요";
+            return $"차트 번호를 다시 한번 확인해 주세요.";
         }
         //var bro = Backend.Chart.GetChartListByFolderV2(int.Parse(fileId));
         var bro = Backend.Chart.GetChartContents(fileId);
         if(bro.IsSuccess() == false) {
             //Debug.LogError($"{fileId}의 데이터를 불러오는 중, 에러가 발생했습니다. : " + bro);
-            return $"{fileId}의 값을 다시 한번 확인해 주세요";
+            return $"차트 번호를 다시 한번 확인해 주세요.";
         }
 
         Debug.Log("데이터 불러오기에 성공했습니다. : " + bro);
@@ -59,7 +59,7 @@ public class BackendManager : MonoBehaviour
         return "불러오기 성공";
     }
 
-    private void Update()
+    /*private void Update()
     {
         if (Input.GetKeyDown(KeyCode.M))
         {
@@ -72,7 +72,7 @@ public class BackendManager : MonoBehaviour
             obj.GetComponent<Makemunja>().Getnayung(DataBaseScript.Instance.siteData[j,0], DataBaseScript.Instance.siteData[j,1], DataBaseScript.Instance.siteData[j,2], DataBaseScript.Instance.siteData[j,3], DataBaseScript.Instance.siteData[j,4], DataBaseScript.Instance.siteData[j,5], DataBaseScript.Instance.siteData[j,6],DataBaseScript.Instance.siteData[j,7]);
             j++;
         }
-    }
+    }*/
 
     public void LoadFile()
     {

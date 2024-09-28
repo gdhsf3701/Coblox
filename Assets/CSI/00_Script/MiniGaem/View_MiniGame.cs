@@ -9,4 +9,5 @@ public class View_MiniGame : MonoBehaviour
     {
         GameObject.Find("MiniGameParent").transform.Find("MiniGame").gameObject.SetActive(true);
     }
+    
 }
