@@ -63,6 +63,8 @@ public class Fire : MonoBehaviour
             andyunsan = false;
             GameManager.Instance.Score += 300;
         }
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //총합점수 보내기
+        Destroy(GameManager.Instance.gameObject);
+        //메인화면으로 이동SceneManager.LoadScene();
     }
 }
