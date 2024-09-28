@@ -38,9 +38,4 @@ public class DoneChack : MonoBehaviour
         }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    public void TimeOver()
-    {
-        //총합점수 보내기
-        //메인화면으로 이동SceneManager.LoadScene();
-    }
 }

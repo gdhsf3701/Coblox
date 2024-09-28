@@ -46,4 +46,10 @@ public class GameManager : MonoBehaviour
     {
         scoreTxt.text = score.ToString();
     }
+
+    public void TimeOver()
+    {
+        //총합점수 보내기
+        //메인화면으로 이동SceneManager.LoadScene();
+    }
 }
