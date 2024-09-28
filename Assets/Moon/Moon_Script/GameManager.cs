@@ -7,16 +7,30 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     [SerializeField]float timer;
-    int score = 0;
-    public int Score 
+    int _nowScore = 0;
+    int munja_Score = 0;
+
+    public int Munja_socre
     {
         get
         {
-            return score;
+            return munja_Score;
         }
         set
         {
-            score = value;
+            munja_Score = value;
+        }
+    }
+    public int NowScore 
+    {
+        get
+        {
+            return _nowScore;
+        }
+        set
+        {
+            _nowScore = value;
+            DataBaseScript.Instance.NowPoint = value;
             ScoreChange();
         }
     }
@@ -34,23 +48,29 @@ public class GameManager : MonoBehaviour
         }
         timerTxt = GameObject.Find("timer").GetComponent<TextMeshProUGUI>();
         scoreTxt = GameObject.Find("scoreTxt").GetComponent<TextMeshProUGUI>();
-        scoreTxt.text = score.ToString();
+        scoreTxt.text = _nowScore.ToString();
         DontDestroyOnLoad(Instance);
     }
     private void Update()
     {
         timer -= Time.deltaTime;
+        if (timer <= 0)
+        {
+            TimeOver();
+        }
         timerTxt.text = Mathf.FloorToInt(timer).ToString();
     }
     private void ScoreChange()
     {
-        scoreTxt.text = score.ToString();
+        scoreTxt.text = _nowScore.ToString();
     }
 
     public void TimeOver()
     {
-        //ÃÑÇÕÁ¡¼ö º¸³»±â
+        //ì´í•©ì ìˆ˜ ë³´ë‚´ê¸°  ---- Done.
+
+        ChatManager.Instance.Edit_DataBase_Point(NowScore);
         Destroy(gameObject);
-        //¸ÞÀÎÈ­¸éÀ¸·Î ÀÌµ¿SceneManager.LoadScene();
+        //ë©”ì¸í™”ë©´ìœ¼ë¡œ ì´ë™SceneManager.LoadScene();
     }
 }
