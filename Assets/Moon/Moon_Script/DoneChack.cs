@@ -23,7 +23,7 @@ public class DoneChack : MonoBehaviour
             }
         }
         if(done&&andyunsan)
-        {
+        {   
             andyunsan = false;
             GameManager.Instance.Score += 300;
         }
@@ -37,5 +37,10 @@ public class DoneChack : MonoBehaviour
             GameManager.Instance.Score += 400;
         }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+    public void TimeOver()
+    {
+        //총합점수 보내기
+        //메인화면으로 이동SceneManager.LoadScene();
     }
 }
