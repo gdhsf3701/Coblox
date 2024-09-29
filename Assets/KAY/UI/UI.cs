@@ -32,12 +32,7 @@ public class UI : MonoBehaviour
         _settingUI.style.display = DisplayStyle.None;
         _startUI.style.display = DisplayStyle.Flex;
         closeSetting.RegisterCallback<ClickEvent>(CloseSetting);
-
-
-
-
     }
-
     private void GameStart(ClickEvent evt)
     {
         SceneManager.LoadScene("02_LoginorSighUP");
