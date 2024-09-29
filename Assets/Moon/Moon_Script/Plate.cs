@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine.SceneManagement;
 using System;
 using System.Collections.Generic;
+using Random = UnityEngine.Random;
 
 public class Plate : MonoBehaviour
 {
