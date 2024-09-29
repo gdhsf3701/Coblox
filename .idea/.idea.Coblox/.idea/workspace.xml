@@ -7,9 +7,6 @@
     <list default="true" id="fc64a87f-2c70-4f09-a57a-13b8de8dcdeb" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/Chat/ChatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/Chat/ChatManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Moon/Moon_Script/DoneChack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Moon/Moon_Script/DoneChack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Moon/Moon_Script/Fire.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Moon/Moon_Script/Fire.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Moon/Moon_Script/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Moon/Moon_Script/GameManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +43,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Unity 에디터에 연결.Unity 에디터에 연결.executor": "Debug",
-    "git-widget-placeholder": "Base",
+    "git-widget-placeholder": "CSI",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -58,7 +55,7 @@
 }]]></component>
   <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.20f1-x86_64\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.20f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\UNITY\Git\Coblox -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\UNITY\Git\Coblox" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -74,7 +71,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unity 시작" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.20f1-x86_64\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.20f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath D:\UNITY\Git\Coblox -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\UNITY\Git\Coblox" />
       <option name="PASS_PARENT_ENVS" value="1" />

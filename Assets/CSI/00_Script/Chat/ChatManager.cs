@@ -140,7 +140,7 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
 
     public void GameStart_BT()//*TImer 는 초 기준*//
     {
-        Send_GameStart();
+        Send_GameStart(500);
     }
 
     public async void Send_GameStart(int Timer = 90)
@@ -154,8 +154,10 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
 
             SendChat("Teacher",Backend.UserNickName);
             await Wait(1200);
-            for (int i = 0; i < DataBaseScript.Instance.siteData.Length; i++)
+            print(DataBaseScript.Instance.siteData.GetLength(0));
+            for (int i = 0; i < DataBaseScript.Instance.siteData.GetLength(0); i++)
             {
+                print(i);
                 list += $"{DataBaseScript.Instance.siteData[i, 0]}$" +
                         $"{DataBaseScript.Instance.siteData[i, 1]}$" +
                         $"{DataBaseScript.Instance.siteData[i, 2]}$" +
