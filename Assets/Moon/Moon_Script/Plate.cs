@@ -1,11 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 using System;
+using System.Collections.Generic;
 
 public class Plate : MonoBehaviour
 {
@@ -29,8 +26,8 @@ public class Plate : MonoBehaviour
     [SerializeField] Collider2D Collider;
     [SerializeField] private Texture2D[] cursorTexture;
     [SerializeField] TMP_InputField inputField;
-    public string[] elemental = { "ÇÜ", "¹ö¼¸", "ÇÇ¸Á", "¿Ã¸®ºê", "ÆäÆÛ·Î´Ï" };
-    private string[] soSu = {"Åä¸¶Åä ¼Ò½º" , "Ä¡Áî" };
+    public string[] elemental = { "ï¿½ï¿½", "ï¿½ï¿½ï¿½ï¿½", "ï¿½Ç¸ï¿½", "ï¿½Ã¸ï¿½ï¿½ï¿½", "ï¿½ï¿½ï¿½Û·Î´ï¿½" };
+    private string[] soSu = {"ï¿½ä¸¶ï¿½ï¿½ ï¿½Ò½ï¿½" , "Ä¡ï¿½ï¿½" };
     public int[] elementalWant = { 0, 0, 0, 0, 0 };
     public int[] elementalCount = { 0, 0, 0, 0, 0 };
     private bool done = true;
@@ -43,17 +40,45 @@ public class Plate : MonoBehaviour
         NowElemental = -1;
         if(elemental != null)
         {
-            string k = DataBase.In
-            //string k = ¹®Á¦ ½Ä;
-            //int i = Random.Range(0, elemental.Length);¿©·¯°¡Áö Àç·áÁß 1 ÅÃ
-            //int j = ¹®Á¦ ´ä;
-            //elementalWant[i] = j//¹®Á¦ÀÇ Á¤´ä;
+            var munjealist = DataBaseScript.Instance.Munjea;
+            
+            string k = munjealist[0].N;
+            int i = Random.Range(0, elemental.Length);
+
+            switch (munjealist[0].success)
+            {
+                case "1":
+                    elementalWant[i] = int.Parse(munjealist[0].t1);
+                    break;
+                case "2":
+                    elementalWant[i] = int.Parse(munjealist[0].t2);
+                    break;
+                case "3":
+                    elementalWant[i] = int.Parse(munjealist[0].t3);
+                    break;
+                case "4":
+                    elementalWant[i] = int.Parse(munjealist[0].t4);
+                    break;
+                case "5":
+                    elementalWant[i] = int.Parse(munjealist[0].t5);
+                    break;
+
+                default:
+                    print("ï¿½ï¿½ï¿½ï¿½");
+                    break;
+            }
+            text.text = $"{elemental[i]}:{k}";
+
+            //string k = ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½;
+            //int i = Random.Range(0, elemental.Length);ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ 1 ï¿½ï¿½
+            //int j = ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½;
+            //elementalWant[i] = j//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½;
             //text.text = $"{elemental[i]}:{k}";
         }
         else
         {
-            //elemental = new string[2];°¢°¢ 1¹øÀº Åä¸¶Åä ¼Ò½º 2¹øÀº Ä¡Áî¼Ò½º ¹®Á¦ ³ÖÀ¸¼À;
-            //elementalWant = new int[2]//°¢°¢ 1¹øÀº Åä¸¶Åä ¼Ò½º 2¹øÀº Ä¡Áî¼Ò½º ´ä ³ÖÀ¸¼À;
+            //elemental = new string[2];ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ï¿½ï¿½ ï¿½ä¸¶ï¿½ï¿½ ï¿½Ò½ï¿½ 2ï¿½ï¿½ï¿½ï¿½ Ä¡ï¿½ï¿½Ò½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½;
+            //elementalWant = new int[2]//ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ï¿½ï¿½ ï¿½ä¸¶ï¿½ï¿½ ï¿½Ò½ï¿½ 2ï¿½ï¿½ï¿½ï¿½ Ä¡ï¿½ï¿½Ò½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½;
             //elementalCount = new int[2];
             //text.text = $"{soSu[0]}:{elemental[0]}";
         }
