@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc64a87f-2c70-4f09-a57a-13b8de8dcdeb" name="변경" comment="" />
+    <list default="true" id="fc64a87f-2c70-4f09-a57a-13b8de8dcdeb" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/ALLSCREEN/DataBaseScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/ALLSCREEN/DataBaseScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/Chat/ChatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/Chat/ChatManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Moon/Moon_Script/DoneChack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Moon/Moon_Script/DoneChack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Moon/Moon_Script/Fire.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Moon/Moon_Script/Fire.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Moon/Moon_Script/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Moon/Moon_Script/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Moon/Moon_Script/Plate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Moon/Moon_Script/Plate.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,7 +61,7 @@
 }</component>
   <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.20f1-x86_64\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.20f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\UNITY\Git\Coblox -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\UNITY\Git\Coblox" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -68,7 +77,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unity 시작" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.20f1-x86_64\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.20f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath D:\UNITY\Git\Coblox -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\UNITY\Git\Coblox" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -133,6 +142,8 @@
       <workItem from="1727390196988" duration="2768000" />
       <workItem from="1727444016303" duration="3359000" />
       <workItem from="1727447894432" duration="1042000" />
+      <workItem from="1727520105560" duration="447000" />
+      <workItem from="1727520640088" duration="2021000" />
     </task>
     <servers />
   </component>

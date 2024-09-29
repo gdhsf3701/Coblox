@@ -43,6 +43,7 @@ public class Plate : MonoBehaviour
         NowElemental = -1;
         if(elemental != null)
         {
+            string k = DataBase.In
             //string k = 문제 식;
             //int i = Random.Range(0, elemental.Length);여러가지 재료중 1 택
             //int j = 문제 답;

@@ -463,10 +463,7 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
                     {
                         GameObject obj = Instantiate(DataBaseScript.Instance.group, GameObject.Find("Canvas").transform);
                         var msg = Message.Split(":")[2];
-                        print(msg);
-                        //다음 문제의 답을 선택하십시오$6 DIVIDE  2(1+2)=?$1$0.3$4$2$7$1$2
                         print(msg.Split("$")[0]);
-                        //다음 문제의 답을 선택하십시오$6 DIVIDE  2(1+2)=?$1$0.3$4$2$7$1$2
                         obj.GetComponent<Makemunja>().Getnayung(
                             msg.Split("$")[0], 
                             msg.Split("$")[1], 
@@ -477,6 +474,8 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
                             msg.Split("$")[6],
                             msg.Split("$")[7],
                             msg.Split("$")[8]);
+                        
+                        GameManager.Instance.Munja_socre = int.Parse(msg.Split("$")[8]);
 
                     }
 

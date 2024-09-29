@@ -61,10 +61,14 @@ public class Fire : MonoBehaviour
         if(lastTime <= 0.5f && lastTime >= 0f && andyunsan)
         {
             andyunsan = false;
-            GameManager.Instance.Score += 300;
+            GameManager.Instance.NowScore += GameManager.Instance.Munja_socre;
         }
-        //ÃÑÇÕÁ¡¼ö º¸³»±â
+        //ì´í•©ì ìˆ˜ ë³´ë‚´ê¸°
+        DataBaseScript.Instance.NowPoint = GameManager.Instance.NowScore;
+
+        ChatManager.Instance.Edit_DataBase_Point(DataBaseScript.Instance.NowPoint);
+
         Destroy(GameManager.Instance.gameObject);
-        //¸ŞÀÎÈ­¸éÀ¸·Î ÀÌµ¿SceneManager.LoadScene();
-    }
+        //ë©”ì¸í™”ë©´ìœ¼ë¡œ ì´ë™SceneManager.LoadScene();
+    } 
 }

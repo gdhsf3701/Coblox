@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DoneChack : MonoBehaviour
 {
+    
     [SerializeField] Plate plate;
     bool done = true;
     private bool andyunsan = true;
@@ -25,7 +26,7 @@ public class DoneChack : MonoBehaviour
         if(done&&andyunsan)
         {   
             andyunsan = false;
-            GameManager.Instance.Score += 300;
+            GameManager.Instance.NowScore += GameManager.Instance.Munja_socre;
         }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
@@ -34,7 +35,7 @@ public class DoneChack : MonoBehaviour
         if (plate.DoneCheck()&&andyunsan)
         {
             andyunsan = false;
-            GameManager.Instance.Score += 400;
+            GameManager.Instance.NowScore += GameManager.Instance.Munja_socre+100;
         }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }

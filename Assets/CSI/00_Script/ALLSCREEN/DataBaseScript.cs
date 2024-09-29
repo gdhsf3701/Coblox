@@ -13,7 +13,7 @@ public class DataBaseScript : MonoBehaviour
     public string[ , ] siteData;
     public float Time;
     public int NowPoint;
-    
+    public List<(string N, string s, string t1, string t2, string t3, string t4, string t5, string success,string score)> Munjea;
     //[]갯수 , [][]정보
     //** [이름,점수] **//
     public List<(int Rank, string Name, int Point)> List = new List<(int Rank, string Name, int Point)>();
