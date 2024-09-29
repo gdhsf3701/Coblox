@@ -61,7 +61,7 @@ public class Fire : MonoBehaviour
         if(lastTime <= 0.5f && lastTime >= 0f && andyunsan)
         {
             andyunsan = false;
-            GameManager.Instance.NowScore += GameManager.Instance.Munja_socre;
+            GameManager.Instance.NowScore += int.Parse(DataBaseScript.Instance.siteData[DataBaseScript.Instance.site_sunsea,8]);
         }
         //총합점수 보내기
         DataBaseScript.Instance.NowPoint = GameManager.Instance.NowScore;

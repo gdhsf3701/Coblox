@@ -26,7 +26,7 @@ public class DoneChack : MonoBehaviour
         if(done&&andyunsan)
         {   
             andyunsan = false;
-            GameManager.Instance.NowScore += GameManager.Instance.Munja_socre;
+            GameManager.Instance.NowScore += int.Parse(DataBaseScript.Instance.siteData[DataBaseScript.Instance.site_sunsea,8]);
         }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
@@ -35,7 +35,7 @@ public class DoneChack : MonoBehaviour
         if (plate.DoneCheck()&&andyunsan)
         {
             andyunsan = false;
-            GameManager.Instance.NowScore += GameManager.Instance.Munja_socre+100;
+            GameManager.Instance.NowScore += int.Parse(DataBaseScript.Instance.siteData[DataBaseScript.Instance.site_sunsea,8])+100;
         }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }

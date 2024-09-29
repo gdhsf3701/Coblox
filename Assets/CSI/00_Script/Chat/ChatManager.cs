@@ -44,6 +44,8 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
     public List<PlayerInfo> players = new List<PlayerInfo>();
 
     public GameObject LoadingUI;
+    string list;
+
     //[UD,이름,]
 
     public void resetthisScript()
@@ -152,18 +154,21 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
 
             SendChat("Teacher",Backend.UserNickName);
             await Wait(1200);
-            foreach (var list in DataBaseScript.Instance.siteData)
+            for (int i = 0; i < DataBaseScript.Instance.siteData.Length; i++)
             {
-                global::SendMessage.Instance.SentMessage("Munjea",$"{list[0]}$" +
-                                                                  $"{list[1]}$" +
-                                                                  $"{list[2]}$" +
-                                                                  $"{list[3]}$" +
-                                                                  $"{list[4]}$" +
-                                                                  $"{list[5]}$" +
-                                                                  $"{list[6]}$" +
-                                                                  $"{list[7]}$" +
-                                                                  $"{list[8]}");
+                list += $"{DataBaseScript.Instance.siteData[i, 0]}$" +
+                        $"{DataBaseScript.Instance.siteData[i, 1]}$" +
+                        $"{DataBaseScript.Instance.siteData[i, 2]}$" +
+                        $"{DataBaseScript.Instance.siteData[i, 3]}$" +
+                        $"{DataBaseScript.Instance.siteData[i, 4]}$" +
+                        $"{DataBaseScript.Instance.siteData[i, 5]}$" +
+                        $"{DataBaseScript.Instance.siteData[i, 6]}$" +
+                        $"{DataBaseScript.Instance.siteData[i, 7]}$" +
+                        $"{DataBaseScript.Instance.siteData[i, 8]}`";
+
             }
+
+            global::SendMessage.Instance.SentMessage("Munjea", list);
             await Wait(1200);
             SendChat("StartGame",Timer.ToString());//초 기준
         }
@@ -476,12 +481,22 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
                     {
                         GameObject obj = Instantiate(DataBaseScript.Instance.group, GameObject.Find("Canvas").transform);
                         var msg = Message.Split(":")[2];
-                        foreach (var VARIABLE in msg.Split(""))
+                        int a = 0;
+                        foreach (var msgs in msg.Split("`"))
                         {
-                            
+                            DataBaseScript.Instance.siteData[a, 0] = msgs.Split("$")[0];
+                            DataBaseScript.Instance.siteData[a,1] = msgs.Split("$")[1]; 
+                            DataBaseScript.Instance.siteData[a,2] = msgs.Split("$")[2]; 
+                            DataBaseScript.Instance.siteData[a,3] = msgs.Split("$")[3]; 
+                            DataBaseScript.Instance.siteData[a,4] = msgs.Split("$")[4]; 
+                            DataBaseScript.Instance.siteData[a,5] = msgs.Split("$")[5]; //여기 분배 다시 해야함..... ':' -> '$'
+                            DataBaseScript.Instance.siteData[a,6] = msgs.Split("$")[6];
+                            DataBaseScript.Instance.siteData[a,7] = msgs.Split("$")[7];
+                            DataBaseScript.Instance.siteData[a,8] = msgs.Split("$")[8];
+                            a++;
                         }
                         //////////////////////////////////////////////////////////////////////////////////////
-                        obj.GetComponent<Makemunja>().Getnayung(
+                        /*obj.GetComponent<Makemunja>().Getnayung(
                             msg.Split("$")[0], 
                             msg.Split("$")[1], 
                             msg.Split("$")[2], 
@@ -490,9 +505,8 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
                             msg.Split("$")[5], //여기 분배 다시 해야함..... ':' -> '$'
                             msg.Split("$")[6],
                             msg.Split("$")[7],
-                            msg.Split("$")[8]);
+                            msg.Split("$")[8]);*/
                         
-                        GameManager.Instance.Munja_socre = int.Parse(msg.Split("$")[8]);
 
                         
                             

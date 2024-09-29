@@ -8,19 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     [SerializeField]float timer;
     int _nowScore = 0;
-    int munja_Score = 0;
 
-    public int Munja_socre
-    {
-        get
-        {
-            return munja_Score;
-        }
-        set
-        {
-            munja_Score = value;
-        }
-    }
     public int NowScore 
     {
         get
