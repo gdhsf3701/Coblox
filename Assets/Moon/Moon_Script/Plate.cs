@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 using System;
 using System.Collections.Generic;
 using Random = UnityEngine.Random;
+using UnityEditor;
 
 public class Plate : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class Plate : MonoBehaviour
     [SerializeField] private Texture2D[] cursorTexture;
     [SerializeField] TMP_InputField inputField;
     public string[] elemental = { "��", "����", "�Ǹ�", "�ø���", "���۷δ�" };
-    private string[] soSu = {"�丶�� �ҽ�" , "ġ��" };
+    private string[] soSu = {"토마토소스" , "치즈" };
     public int[] elementalWant = { 0, 0, 0, 0, 0 };
     public int[] elementalCount = { 0, 0, 0, 0, 0 };
     private bool done = true;
@@ -75,16 +76,16 @@ public class Plate : MonoBehaviour
                 Random.Range(0,DataBaseScript.Instance.siteData.Length);
             }
 
-            //string k = ���� ��;
-            //int i = Random.Range(0, elemental.Length);�������� ����� 1 ��
-            //int j = ���� ��;
-            //elementalWant[i] = j//������ ����;
+            //string k = 문제 식;
+            //int i = Random.Range(0, elemental.Length);여러가지 재료중 1 택
+            //int j = 문제 답;
+            //elementalWant[i] = j//문제의 정답;
             //text.text = $"{elemental[i]}:{k}";
         }
         else
         {
-            //elemental = new string[2];���� 1���� �丶�� �ҽ� 2���� ġ��ҽ� ���� ������;
-            //elementalWant = new int[2]//���� 1���� �丶�� �ҽ� 2���� ġ��ҽ� �� ������;
+            //elemental = new string[2];각각 1번은 토마토 소스 2번은 치즈소스 문제 넣으셈;
+            //elementalWant = new int[2]//각각 1번은 토마토 소스 2번은 치즈소스 답 넣으셈;
             //elementalCount = new int[2];
             //text.text = $"{soSu[0]}:{elemental[0]}";
         }
@@ -123,10 +124,21 @@ public class Plate : MonoBehaviour
     {
         if (nowElemental >= -1 && nowElemental < cursorTexture.Length - 1)
         {
-            Cursor.SetCursor(cursorTexture[nowElemental + 1], new Vector2(cursorTexture[nowElemental + 1].width * 0.45f, cursorTexture[nowElemental + 1].height * 0.35f), CursorMode.ForceSoftware);
-            if (elemental[4] == null)
+            if (elemental[0] == "토마토소스")
             {
-                text.text = $"{soSu[nowElemental]}:{elemental[nowElemental]}";
+                Cursor.SetCursor(cursorTexture[nowElemental + 1], new Vector2(cursorTexture[nowElemental + 1].width* 0.49f, cursorTexture[nowElemental + 1].height* 0.49f), CursorMode.ForceSoftware);
+                if(nowElemental != -1)
+                {
+                    text.text = $"{soSu[nowElemental]}:{elemental[nowElemental]}";
+                }
+                else
+                {
+                    text.text = $"{soSu[nowElemental+1]}:{elemental[nowElemental+1]}";
+                }
+            }
+            else
+            {
+                Cursor.SetCursor(cursorTexture[nowElemental + 1], new Vector2(cursorTexture[nowElemental + 1].width*0.45f, cursorTexture[nowElemental + 1].height * 0.35f), CursorMode.ForceSoftware);
             }
         }   
     }

@@ -484,8 +484,12 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
                         GameObject obj = Instantiate(DataBaseScript.Instance.group, GameObject.Find("Canvas").transform);
                         var msg = Message.Split(":")[2];
                         int a = 0;
+                        DataBaseScript.Instance.siteData = new string[10,9]; 
                         foreach (var msgs in msg.Split("`"))
                         {
+                            //문제1$(2-3i)(5+4i)$1$11$21$31$41$1$1
+                            print(msgs);
+                            print(a);
                             DataBaseScript.Instance.siteData[a, 0] = msgs.Split("$")[0];
                             DataBaseScript.Instance.siteData[a,1] = msgs.Split("$")[1]; 
                             DataBaseScript.Instance.siteData[a,2] = msgs.Split("$")[2]; 
@@ -496,6 +500,10 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
                             DataBaseScript.Instance.siteData[a,7] = msgs.Split("$")[7];
                             DataBaseScript.Instance.siteData[a,8] = msgs.Split("$")[8];
                             a++;
+                            if(DataBaseScript.Instance.siteData.GetLength(0) < a)
+                            {
+                                return;
+                            }
                         }
                         //////////////////////////////////////////////////////////////////////////////////////
                         /*obj.GetComponent<Makemunja>().Getnayung(

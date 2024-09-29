@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
         timerTxt = GameObject.Find("timer").GetComponent<TextMeshProUGUI>();
         scoreTxt = GameObject.Find("scoreTxt").GetComponent<TextMeshProUGUI>();
         scoreTxt.text = _nowScore.ToString();
-        DontDestroyOnLoad(Instance);
+        DontDestroyOnLoad(gameObject);
     }
     private void Update()
     {
