@@ -1,6 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Test : MonoBehaviour
@@ -29,8 +27,8 @@ public class Test : MonoBehaviour
                                                           $"{DataBaseScript.Instance.siteData[count,6]}$" +
                                                           $"{DataBaseScript.Instance.siteData[count,7]}$" +
                                                           $"{DataBaseScript.Instance.siteData[count,8]}");
-    
         
+
         count++;
     }
 

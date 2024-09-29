@@ -62,7 +62,7 @@ public class BackendManager : MonoBehaviour
     /*private void Update()
     {
         if (Input.GetKeyDown(KeyCode.M))
-        {
+        {1
             if (j >= i)
             {
                 print("차트가 비어있습니다.");

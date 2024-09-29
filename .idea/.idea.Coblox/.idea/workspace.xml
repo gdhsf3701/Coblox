@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="fc64a87f-2c70-4f09-a57a-13b8de8dcdeb" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/ALLSCREEN/DataBaseScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/ALLSCREEN/DataBaseScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/Backend/ResetBackend.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/Backend/ResetBackend.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/Chat/ChatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/Chat/ChatManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/03_1_Teacher.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/03_1_Teacher.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/03_2_StudentJoinRoom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/03_2_StudentJoinRoom.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/Test.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,6 +144,7 @@
       <workItem from="1727530247983" duration="309000" />
       <workItem from="1727531984691" duration="517000" />
       <workItem from="1727581558953" duration="1116000" />
+      <workItem from="1727611112212" duration="1026000" />
     </task>
     <servers />
   </component>
