@@ -380,7 +380,7 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
                     }
                     else
                     {
-                        SceneManager.LoadScene("04_2_InGame");
+                        SceneManager.LoadScene("RestaurantStart");
 
                     }
 

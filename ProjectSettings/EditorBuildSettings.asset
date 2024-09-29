@@ -24,6 +24,18 @@ EditorBuildSettings:
     path: Assets/CSI/01_Scenes/Main/04_1_TeathcerInGame.unity
     guid: ab2d15aa95d97d44990275a96bf295e4
   - enabled: 1
+    path: Assets/Moon/MoonScenes/RestaurantStart.unity
+    guid: c361d823a40399a4683ab4bfee70b47f
+  - enabled: 1
+    path: Assets/Moon/MoonScenes/SoSu.unity
+    guid: a927770ab0df23f4b8a37d28dec3d4ec
+  - enabled: 1
+    path: Assets/Moon/MoonScenes/Cooking.unity
+    guid: 94ba0e356009c1445a25791127c8b87e
+  - enabled: 1
+    path: Assets/Moon/MoonScenes/GoopGi.unity
+    guid: f5f8f8c30725d3b4193220d2517430ed
+  - enabled: 1
     path: Assets/CSI/01_Scenes/Main/04_2_InGame.unity
     guid: 051bbd459b3714c4d86cbdee3751f2da
   - enabled: 1
