@@ -41,27 +41,27 @@ public class Plate : MonoBehaviour
         NowElemental = -1;
         if(elemental != null)
         {
-            var munjealist = DataBaseScript.Instance.Munjea;
-            
-            string k = munjealist[0].N;
-            int i = Random.Range(0, elemental.Length);
+            var munjealist = DataBaseScript.Instance.siteData;
+            int su = DataBaseScript.Instance.site_sunsea;
+            string k = munjealist[su, 1];
+            int i = Random.Range(su, elemental.Length);
 
-            switch (munjealist[0].success)
+            switch (munjealist[su, 8])
             {
                 case "1":
-                    elementalWant[i] = int.Parse(munjealist[0].t1);
+                    elementalWant[i] = int.Parse(munjealist[su, 2]);
                     break;
                 case "2":
-                    elementalWant[i] = int.Parse(munjealist[0].t2);
+                    elementalWant[i] = int.Parse(munjealist[su,3]);
                     break;
                 case "3":
-                    elementalWant[i] = int.Parse(munjealist[0].t3);
+                    elementalWant[i] = int.Parse(munjealist[su,4]);
                     break;
                 case "4":
-                    elementalWant[i] = int.Parse(munjealist[0].t4);
+                    elementalWant[i] = int.Parse(munjealist[su,5]);
                     break;
                 case "5":
-                    elementalWant[i] = int.Parse(munjealist[0].t5);
+                    elementalWant[i] = int.Parse(munjealist[su,6]);
                     break;
 
                 default:
@@ -69,6 +69,11 @@ public class Plate : MonoBehaviour
                     break;
             }
             text.text = $"{elemental[i]}:{k}";
+            DataBaseScript.Instance.site_sunsea++;
+            if(DataBaseScript.Instance.siteData.Length < su)
+            {
+                Random.Range(0,DataBaseScript.Instance.siteData.Length);
+            }
 
             //string k = ���� ��;
             //int i = Random.Range(0, elemental.Length);�������� ����� 1 ��
