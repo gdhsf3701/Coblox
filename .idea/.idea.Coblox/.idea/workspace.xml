@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="fc64a87f-2c70-4f09-a57a-13b8de8dcdeb" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/Chat/ChatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/Chat/ChatManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/Start/BackGroundMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/Start/BackGroundMove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/01_Start.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/01_Start.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KAY/RealStartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KAY/RealStartScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,23 +41,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Unity 에디터에 연결.Unity 에디터에 연결.executor": "Debug",
-    "git-widget-placeholder": "CSI",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Unity 에디터에 연결.Unity 에디터에 연결.executor&quot;: &quot;Debug&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Base&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.20f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.20f1-x86_64\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\UNITY\Git\Coblox -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\UNITY\Git\Coblox" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -71,7 +73,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unity 시작" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.20f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.20f1-x86_64\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath D:\UNITY\Git\Coblox -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\UNITY\Git\Coblox" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -142,6 +144,7 @@
       <workItem from="1727531984691" duration="517000" />
       <workItem from="1727581558953" duration="1116000" />
       <workItem from="1727611112212" duration="1485000" />
+      <workItem from="1727653246380" duration="301000" />
     </task>
     <servers />
   </component>
