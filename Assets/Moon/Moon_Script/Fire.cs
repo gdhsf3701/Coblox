@@ -21,6 +21,7 @@ public class Fire : MonoBehaviour
     private void Start()
     {
         RandomFireTime();
+        Cursor.SetCursor(default,new Vector2(0,0),CursorMode.Auto);
     }
     private void Update()
     {

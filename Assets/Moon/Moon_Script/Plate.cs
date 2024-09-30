@@ -52,7 +52,7 @@ public class Plate : MonoBehaviour
         {
             
 
-            switch (munjealist[su, 8])
+            switch (munjealist[su, 7])
             {
                 case "1":
                     elementalWant[i] = int.Parse(munjealist[su, 2]);
@@ -92,9 +92,14 @@ public class Plate : MonoBehaviour
             elemental = new string[2];
             elemental[0] = munjealist[su,1];
             elemental[1] = munjealist[su+1,1];
-            for (int iss = 0; iss < 1; iss++)
+            for (int iss = 0; iss < 2; iss++)
             {
-                switch (munjealist[su, 8])
+                print(int.Parse(munjealist[iss, 2]));
+                print(int.Parse(munjealist[iss, 3]));
+                print(int.Parse(munjealist[iss, 4]));
+                print(int.Parse(munjealist[iss, 5]));
+                print(int.Parse(munjealist[iss, 6]));
+                switch (munjealist[iss, 7])
                 {
                     case "1":
                         elementalWant[iss] = int.Parse(munjealist[iss, 2]);
@@ -117,7 +122,7 @@ public class Plate : MonoBehaviour
                         break;
                 }
             }
-            text.GetTexture(soSu[0],elemental[0]);
+            text.GetTexture("","");
 
             //elemental = new string[2];각각 1번은 토마토 소스 2번은 치즈소스 문제 넣으셈;
             //elementalWant = new int[2]//각각 1번은 토마토 소스 2번은 치즈소스 답 넣으셈;
@@ -135,16 +140,26 @@ public class Plate : MonoBehaviour
                 mousePosition.z = 0f;
                 if (Collider.OverlapPoint(mousePosition)) 
                 {
-                    GameObject game = Instantiate(elementals[nowElemental], mousePosition, Quaternion.identity);
-                    if(game != null) 
+                    if (!isSosu)
                     {
-                        elementalCount[nowElemental]++;
+                        GameObject game = Instantiate(elementals[nowElemental], mousePosition, Quaternion.identity);
+                        if(game != null) 
+                        {
+                            elementalCount[nowElemental]++;
+                        }
+                    }
+                    else
+                    {
+                        ChangeDow(nowElemental);
                     }
                 }
             }
-            else if (isSosu)
+        }
+        if(Input.GetKeyDown(KeyCode.Return))
+        {
+            if(inputField != null)
             {
-                ChangeDow(nowElemental);
+                inputField.text = "";
             }
         }
     }
@@ -181,8 +196,12 @@ public class Plate : MonoBehaviour
         {
             return;
         }
+        if(inputField.text == null||inputField.text == "")
+        {
+            return;
+        }
         elementalCount[nowElemental] = int.Parse(inputField.text);
-        if (elementalWant[0] == elementalCount[0] && elementalWant[1] == elementalCount[1])
+        if (elementalWant[0] == elementalCount[0] && elementalWant[1] == elementalCount[1]&&Dow.sprite == dowSprite[2])
         {
             doneCheck = true;
         }
