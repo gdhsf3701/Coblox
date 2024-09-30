@@ -22,8 +22,8 @@ public class GameManager : MonoBehaviour
             ScoreChange();
         }
     }
-    TextMeshProUGUI timerTxt;
-    TextMeshProUGUI scoreTxt;
+    public TextMeshProUGUI timerTxt;
+    public TextMeshProUGUI scoreTxt;
     private void Awake()
     {
         if(Instance == null)
@@ -34,9 +34,6 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        timerTxt = GameObject.Find("timer").GetComponent<TextMeshProUGUI>();
-        scoreTxt = GameObject.Find("scoreTxt").GetComponent<TextMeshProUGUI>();
-        scoreTxt.text = _nowScore.ToString();
         DontDestroyOnLoad(gameObject);
         timer = DataBaseScript.Instance.Time;
     }
@@ -56,8 +53,6 @@ public class GameManager : MonoBehaviour
 
     public void TimeOver()
     {
-        //총합점수 보내기  ---- Done.
-        ChatManager.Instance.Edit_DataBase_Point(NowScore);
         Destroy(gameObject);
     }
 }

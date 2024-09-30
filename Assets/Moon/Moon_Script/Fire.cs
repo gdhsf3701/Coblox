@@ -21,6 +21,7 @@ public class Fire : MonoBehaviour
     private void Start()
     {
         RandomFireTime();
+        Cursor.SetCursor(default,new Vector2(0,0),CursorMode.Auto);
     }
     private void Update()
     {
@@ -64,13 +65,11 @@ public class Fire : MonoBehaviour
             GameManager.Instance.NowScore += Random.Range(1,5);
         }
         //총합점수 보내기
-        DataBaseScript.Instance.NowPoint = GameManager.Instance.NowScore;
+        ChatManager.Instance.Edit_DataBase_Point(GameManager.Instance.NowScore);
 
-        ChatManager.Instance.Edit_DataBase_Point(DataBaseScript.Instance.NowPoint);
 
-        Destroy(GameManager.Instance.gameObject);
 
-        SceneManager.LoadScene("05_EndGame");
+        SceneManager.LoadScene("RestaurantStart");
         //메인화면으로 이동SceneManager.LoadScene();
     } 
 }
