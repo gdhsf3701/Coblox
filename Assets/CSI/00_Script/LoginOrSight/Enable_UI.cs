@@ -21,6 +21,7 @@ public class Enable_UI : MonoBehaviour
     public void Open_LoginPopup()
     {
         //Main.SetActive(false);
+        GetComponent<Login>().Back_Bt.interactable = true; 
         SetEnableBt(false);
         login.SetActive(true);
     }

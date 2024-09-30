@@ -15,6 +15,7 @@ public class Login : MonoBehaviour
     [SerializeField]public TMP_InputField ID, PW, nicknamel;
     [SerializeField]private Image loginimage;
     [SerializeField]private Sprite Don,startIm;
+    [SerializeField] public Button Back_Bt;
 
     private void Awake()
     {
@@ -77,6 +78,7 @@ public class Login : MonoBehaviour
             {
                 print("길드 불러오기 실패");
             }*/
+            Back_Bt.interactable = false;
             TeamSellct.SetActive(true);
             DataBaseScript.Instance.NicName = nicknamel.text;
             DataBaseScript.Instance.UID = Backend.UID;
@@ -154,60 +156,4 @@ public class Login : MonoBehaviour
         nicknamel.text = "";
         Text.text = "";
     }
-    public void Click_Login_Bt()
-    {
-        var login = Backend.BMember.CustomLogin(ID.text, PW.text);
-        if (login.IsSuccess())
-        {
-            /*if (Backend.UserNickName == "Admin")
-            {
-                var lists = Backend.Guild.GetApplicantsV3();
-                for (int i = 0; i < lists.FlattenRows().Count; i++)
-                {
-                    print(lists.FlattenRows()[i]["nickname"].ToString());
-                    print(lists.FlattenRows()[i]["inDate"].ToString());
-                    
-                }
-
-
-            }*/
-        }
-        else
-        {
-            print(login.Message);
-            print(login.ErrorMessage);
-        }
-
-    }
-
-    /*private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            var a = Backend.Guild.ApplyGuildV3("2024-08-21T15:38:53.219Z");
-            if (a.IsSuccess())
-            {
-                print("선생님 권환 요청완료");
-            }
-            else
-            {
-                print(a.ErrorMessage);
-            }
-        }
-
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            var a = Backend.Guild.ApproveApplicantV3("2024-08-20T16:12:02.293Z");
-            if (a.IsSuccess())
-            {
-                print(a.Message);
-            }
-            else
-            {
-                print(a.Message);
-                print(a.ErrorCode);
-            }
-        }
-    }*/
-
 }

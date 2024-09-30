@@ -418,7 +418,7 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
                     */
                     
                     DataBaseScript.Instance.List = new List<(int Rank, string Name, int Point)>();
-
+                    
                     string[] rankMessages = message.Split('/');
                     for (int i = 0; i < rankMessages.Length; i++)
                     {
@@ -481,7 +481,6 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
                     //클라이언트UID:Munjea:차트 번호
                     if (!isRoomOwner)//클라
                     {
-                        GameObject obj = Instantiate(DataBaseScript.Instance.group, GameObject.Find("Canvas").transform);
                         var msg = Message.Split(":")[2];
                         int a = 0;
                         DataBaseScript.Instance.siteData = new string[10,9]; 
