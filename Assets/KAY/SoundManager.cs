@@ -4,29 +4,31 @@ using UnityEngine;
 
 public class SoundManager : MonoSingleton<SoundManager>
 {
-    private float volume = 0;
-    private float bgmvolume = 0;
+    private float volume = 0.5f;
+    private float bgmVolume = 0.5f;
 
     public void SetVolume(float newVolume)
     {
         volume = Mathf.Clamp01(newVolume);
-        // 볼륨에 대한 실제 로직 적용 (예: AudioSource의 volume 설정 등)
     }
 
-    public void SetBgmVolume(float newVolume)
+    public void SetBgmVolume(float newBgmVolume)
     {
-        bgmvolume = Mathf.Clamp01(newVolume);
-        // BGM에 대한 실제 로직 적용 (예: BGM AudioSource의 volume 설정 등)
+        bgmVolume = Mathf.Clamp01(newBgmVolume);
     }
 
-    public float GetVolume()
+    public float GetVolume() => volume;
+    public float GetBgmVolume() => bgmVolume;
+
+    public void MuteMusic()
     {
-        return volume;
+        SetBgmVolume(0);
     }
 
-    public float GetBgmVolume()
+    public void ResetSettings()
     {
-        return bgmvolume;
+        SetVolume(0.5f);
+        SetBgmVolume(0.5f);
     }
 }
 
