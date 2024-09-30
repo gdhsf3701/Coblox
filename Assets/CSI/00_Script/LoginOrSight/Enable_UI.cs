@@ -35,6 +35,7 @@ public class Enable_UI : MonoBehaviour
 
     public void SetEnableBt(bool Enable)
     {
+        
         foreach (var Bt in loginandSightbt)
         {
             Bt.interactable = Enable;
