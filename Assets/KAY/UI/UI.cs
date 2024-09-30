@@ -61,21 +61,26 @@ public class UI : MonoBehaviour
     // 게임 시작 시 호출
     private void GameStart(ClickEvent evt)
     {
+        SoundManager.Instance.PlaySound(Sound.ButtonClick);
         SceneManager.LoadScene("02_LoginorSighUP");
     }
 
     // 설정 UI 열기
     private void OpenSetting(ClickEvent evt)
     {
+        SoundManager.Instance.PlaySound(Sound.ButtonClick);
         _settingUI.style.display = DisplayStyle.Flex;
         _startUI.style.display = DisplayStyle.None;
+       
     }
 
     // 설정 UI 닫기
     private void CloseSetting(ClickEvent evt)
     {
+        SoundManager.Instance.PlaySound(Sound.ButtonClick);
         _settingUI.style.display = DisplayStyle.None;
         _startUI.style.display = DisplayStyle.Flex;
+        
     }
 
     // 게임 종료
