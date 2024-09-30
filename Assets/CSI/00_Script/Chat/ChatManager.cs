@@ -97,6 +97,7 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
     }
     public void OnCreateRoom()
     {
+        SoundManager.Instance.PlaySound(Sound.ButtonClick);
         if (DataBaseScript.Instance.teacher)
         {
             DataBaseScript.Instance.isOwner = false;
@@ -124,6 +125,7 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
 
     public void OnjoinRoom()
     {
+        SoundManager.Instance.PlaySound(Sound.ButtonClick);
         print("게임 룸 입장 시도");
         JoinprivateRoom(ulong.Parse(RoomCodeInput.text));
     }
@@ -141,6 +143,7 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
 
     public void GameStart_BT()//*TImer 는 초 기준*//
     {
+        SoundManager.Instance.PlaySound(Sound.ButtonClick);
         Send_GameStart(100);
     }
 
@@ -226,6 +229,7 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
 
     public void OnJoinChannel(ChannelInfo channelInfo)
     {
+        SoundManager.Instance.PlaySound(Sound.ButtonClick);
         LoadingUI.SetActive(false);
         print("채팅 채널 조인");
         print(channelInfo.ChannelName);
@@ -272,7 +276,8 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
 
     public void OnLeaveChannel(ChannelInfo channelInfo)
     {
-         print("채팅 체널 나감");
+        SoundManager.Instance.PlaySound(Sound.ButtonClick);
+        print("채팅 체널 나감");
          print(channelInfo.ChannelNumber);
          print(channelInfo.ChannelName);
          LoadingUI.SetActive(true);

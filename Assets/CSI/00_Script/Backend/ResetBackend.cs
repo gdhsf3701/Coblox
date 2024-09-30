@@ -76,6 +76,7 @@ public class BackendManager : MonoBehaviour
 
     public void LoadFile()
     {
+        SoundManager.Instance.PlaySound(Sound.ButtonClick);
         _tmpInputField.text = GetDataTable(_tmpInputField.text.ToString());
     }
 }

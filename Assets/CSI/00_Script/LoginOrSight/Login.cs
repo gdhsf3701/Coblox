@@ -35,6 +35,7 @@ public class Login : MonoBehaviour
 
     public void Login_bt()
     {
+        SoundManager.Instance.PlaySound(Sound.ButtonClick);
 
         if (nicknamel.text.Length > 6)//글자수 제한 6글자 이상 불가
         {
