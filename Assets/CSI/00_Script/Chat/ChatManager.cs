@@ -39,6 +39,7 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
     public bool isRoomOwner;
     private float LimitTime, NowTime;
     public string Message;
+    public event Action EndGameEvent; 
     public event Action<string> getMessage;
     public event Action PlzresetList;
     public List<PlayerInfo> players = new List<PlayerInfo>();
@@ -416,7 +417,7 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
                      * 3:uid:point/
                      * 4:uid:point/
                     */
-                    
+                    EndGameEvent?.Invoke();
                     DataBaseScript.Instance.List = new List<(int Rank, string Name, int Point)>();
                     
                     string[] rankMessages = message.Split('/');

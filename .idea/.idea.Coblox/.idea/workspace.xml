@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc64a87f-2c70-4f09-a57a-13b8de8dcdeb" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/Chat/ChatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/Chat/ChatManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/LoginOrSight/Enable_UI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/LoginOrSight/Enable_UI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/LoginOrSight/Login.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/LoginOrSight/Login.cs" afterDir="false" />
-    </list>
+    <list default="true" id="fc64a87f-2c70-4f09-a57a-13b8de8dcdeb" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -145,7 +140,7 @@
       <workItem from="1727581558953" duration="1116000" />
       <workItem from="1727611112212" duration="1485000" />
       <workItem from="1727653246380" duration="711000" />
-      <workItem from="1727687066579" duration="2711000" />
+      <workItem from="1727687066579" duration="3130000" />
     </task>
     <servers />
   </component>

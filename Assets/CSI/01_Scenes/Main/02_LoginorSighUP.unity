@@ -627,6 +627,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &347520618 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1865971971340765189, guid: 1a7f74ee21c46e54cbee7d1f4f3a19b5, type: 3}
+  m_PrefabInstance: {fileID: 87415911}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347520612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &448474308 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4496406109145558714, guid: 5dae009c258e08146b38f3546807536c, type: 3}
@@ -1297,6 +1308,7 @@ MonoBehaviour:
   isOwner: 0
   UID: 
   NicName: 
+  site_sunsea: 0
   Time: 0
   NowPoint: 0
   teacher: 0
@@ -1928,6 +1940,7 @@ MonoBehaviour:
   loginimage: {fileID: 1867845888}
   Don: {fileID: 21300000, guid: 81e67bfc4f30843428afcdce54a65476, type: 3}
   startIm: {fileID: 21300000, guid: b5670e3e96281c94e95c05cf35454931, type: 3}
+  Back_Bt: {fileID: 347520618}
 --- !u!114 &1170125015
 MonoBehaviour:
   m_ObjectHideFlags: 0
