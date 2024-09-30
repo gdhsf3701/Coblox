@@ -25,7 +25,7 @@ public class Option : MonoBehaviour
         musicLabel = rootElement.Q<Label>("MusicLabel");
 
         // 슬라이더 초기값 설정
-        soundSlider.value = SoundManager.Instance.GetVolume() * 10; // 0~1 값을 0~10으로 변환
+        soundSlider.value = SoundManager.Instance.GetVolume() * 10; 
         musicSlider.value = SoundManager.Instance.GetBgmVolume() * 10;
 
         // 슬라이더 값 변경 시 이벤트 등록
