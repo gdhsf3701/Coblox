@@ -157,16 +157,18 @@ public class SetImage : MonoBehaviour
     }
 
 
-    public void GetTexture(string Korean,string susick)
     {
         StartCoroutine(CallPythonScript(susick, s =>
         {
             susick = s;
             susick = changetext(susick);
-            _tex.text = Korean+" : "+susick;
         }));
 
 
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        GameObject.Find("Canvas").transform.Find("TEXDraw").GetComponent<SetImage>().GetTexture("{3} over {2}"/*한글 파일 수식*/);
+    }
 }

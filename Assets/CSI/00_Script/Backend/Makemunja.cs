@@ -25,7 +25,6 @@ public class
 
     public void SetImg(string text)
     {
-        //_tex.GetComponent<SetImage>().GetTexture(text);
     }
 
     private string successSave;
