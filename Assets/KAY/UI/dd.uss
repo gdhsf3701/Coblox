@@ -106,18 +106,19 @@
 }
 
 #SoundSlider #unity-dragger {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-top-left-radius: 28px;
     border-top-right-radius: 28px;
     border-bottom-right-radius: 28px;
     border-bottom-left-radius: 28px;
-    top: 7px;
-    left: -6px;
+    top: 0;
+    left: -10px;
     border-top-width: 3px;
     border-right-width: 3px;
     border-bottom-width: 3px;
     border-left-width: 3px;
+    background-image: url("project://database/Assets/KAY/UI/4_20240930235550.png?fileID=21300000&guid=4ca667af516d03e4da6e4338c98e0742&type=3#4_20240930235550");
 }
 
 #SoundSlider #unity-drag-container {
@@ -132,10 +133,10 @@
 }
 
 #BGMSlider #unity-dragger {
-    left: -6px;
-    top: 7px;
-    width: 40px;
-    height: 40px;
+    left: -8px;
+    top: 3px;
+    width: 50px;
+    height: 50px;
     border-top-width: 3px;
     border-right-width: 3px;
     border-bottom-width: 3px;
@@ -144,6 +145,7 @@
     border-top-right-radius: 28px;
     border-bottom-right-radius: 28px;
     border-bottom-left-radius: 28px;
+    background-image: url("project://database/Assets/KAY/UI/4_20240930235550.png?fileID=21300000&guid=4ca667af516d03e4da6e4338c98e0742&type=3#4_20240930235550");
 }
 
 #BGMSlider #unity-tracker {

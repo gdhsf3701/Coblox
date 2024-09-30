@@ -30,7 +30,7 @@ public class Plate : MonoBehaviour
     [SerializeField] TMP_InputField inputField;
     public string[] elemental = { "햄", "버섯", "피망", "올리브", "페퍼로니" };
     private string[] soSu = {"토마토소스" , "치즈" };
-    [SerializeField] bool isSosu = false;
+    [SerializeField] public bool isSosu = false;
     public int[] elementalWant = { 0, 0, 0, 0, 0 };
     public int[] elementalCount = { 0, 0, 0, 0, 0 };
     private bool done = true;
@@ -146,11 +146,13 @@ public class Plate : MonoBehaviour
                         if(game != null) 
                         {
                             elementalCount[nowElemental]++;
+                            SoundManager.Instance.PlaySound(Sound.toppingDraw);
                         }
                     }
                     else
                     {
                         ChangeDow(nowElemental);
+                        SoundManager.Instance.PlaySound(Sound.SauceandCheeseDraw);
                     }
                 }
             }

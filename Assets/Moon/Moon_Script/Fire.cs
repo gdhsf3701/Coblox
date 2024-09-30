@@ -27,6 +27,8 @@ public class Fire : MonoBehaviour
         if (timeCheck) 
         {
             lastTime -= Time.deltaTime;
+            SoundManager.Instance.PlaySound(Sound.Fire);
+            SoundManager.Instance.PlaySound(Sound.tiktoksound);
             ChangeTmpText();
             ChagneTextAColor();    
         }
@@ -38,6 +40,7 @@ public class Fire : MonoBehaviour
     private void CantTimeCheck()
     {
         timeCheck = false;
+        SoundManager.Instance.PlaySound(Sound.HawduckClose);
     }
     private void RandomFireTime()
     {
@@ -58,10 +61,17 @@ public class Fire : MonoBehaviour
     }
     public void DoneCheck()
     {
+        SoundManager.Instance.PlaySound(Sound.ButtonClick);
         if(lastTime <= 0.5f && lastTime >= 0f && andyunsan)
         {
             andyunsan = false;
             GameManager.Instance.NowScore += Random.Range(1,5);
+            SoundManager.Instance.PlaySound(Sound.Success);
+        }
+        else
+        {
+            SoundManager.Instance.PlaySound(Sound.Fail);
+
         }
         //총합점수 보내기
         ChatManager.Instance.Edit_DataBase_Point(GameManager.Instance.NowScore);

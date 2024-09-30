@@ -15,6 +15,14 @@ public class Elemental : MonoBehaviour
         if (plate.NowElemental != elementalNum)
         {
             plate.NowElemental = elementalNum;
+            if (plate.isSosu)
+            {
+                SoundManager.Instance.PlaySound(Sound.toppingSelect);
+            }
+            else
+            {
+                SoundManager.Instance.PlaySound(Sound.SauceandCheeseSelect);
+            }
         }
     }
 }
