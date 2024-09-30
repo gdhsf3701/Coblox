@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fc64a87f-2c70-4f09-a57a-13b8de8dcdeb" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/Start/BackGroundMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/Start/BackGroundMove.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/01_Start.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/01_Start.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KAY/RealStartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KAY/RealStartScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Moon/Moon_Script/Plate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Moon/Moon_Script/Plate.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +43,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;Unity 에디터에 연결.Unity 에디터에 연결.executor&quot;: &quot;Debug&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Base&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;CSI&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -144,7 +142,8 @@
       <workItem from="1727531984691" duration="517000" />
       <workItem from="1727581558953" duration="1116000" />
       <workItem from="1727611112212" duration="1485000" />
-      <workItem from="1727653246380" duration="301000" />
+      <workItem from="1727653246380" duration="711000" />
+      <workItem from="1727687066579" duration="274000" />
     </task>
     <servers />
   </component>
