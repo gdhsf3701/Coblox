@@ -141,7 +141,7 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
 
     public void GameStart_BT()//*TImer 는 초 기준*//
     {
-        Send_GameStart(500);
+        Send_GameStart(100);
     }
 
     public async void Send_GameStart(int Timer = 90)
@@ -505,33 +505,18 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
                                 return;
                             }
                         }
-                        //////////////////////////////////////////////////////////////////////////////////////
-                        /*obj.GetComponent<Makemunja>().Getnayung(
-                            msg.Split("$")[0], 
-                            msg.Split("$")[1], 
-                            msg.Split("$")[2], 
-                            msg.Split("$")[3], 
-                            msg.Split("$")[4], 
-                            msg.Split("$")[5], //여기 분배 다시 해야함..... ':' -> '$'
-                            msg.Split("$")[6],
-                            msg.Split("$")[7],
-                            msg.Split("$")[8]);*/
-                        
-
-                        
-                            
-
                     }
-
-
                     break;
+                
                 case "Test":
                     //테스트 Case
                     print("");
                     break;
+                
                 case "":
                     print("이건 뭐냐");
                     break;
+                
                 default:
                     print("No matched case for " + Message.Split(":")[1]);
                     break;
