@@ -484,7 +484,6 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
                     {
                         var msg = Message.Split(":")[2];
                         int a = 0;
-                        DataBaseScript.Instance.siteData = new string[10,9]; 
                         foreach (var msgs in msg.Split("`"))
                         {
                             //문제1$(2-3i)(5+4i)$1$11$21$31$41$1$1

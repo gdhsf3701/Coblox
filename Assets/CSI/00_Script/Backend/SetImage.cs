@@ -157,13 +157,11 @@ public class SetImage : MonoBehaviour
     }
 
 
-    public void GetTexture(string susick)
     {
         StartCoroutine(CallPythonScript(susick, s =>
         {
             susick = s;
             susick = changetext(susick);
-            _tex.text = susick;
         }));
 
 
