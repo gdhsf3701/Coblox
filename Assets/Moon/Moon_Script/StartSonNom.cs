@@ -2,10 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class StartSonNom : MonoBehaviour
 {
     bool done = true;
+    [SerializeField] Sprite[] SonNomSprites;
+    SpriteRenderer SonNomRenderer;
     public bool Done 
     {
         get
@@ -29,6 +32,8 @@ public class StartSonNom : MonoBehaviour
     private void Awake()
     {
         StartCoroutine(StartDoneChenge());
+        SonNomRenderer = GetComponent<SpriteRenderer>();
+        SonNomRenderer.sprite = SonNomSprites[Random.Range(0, SonNomSprites.Length)];
     }
     private void Update()
     {
@@ -60,6 +65,7 @@ public class StartSonNom : MonoBehaviour
             yield return null;
         }
         transform.position = start.position;
+        SonNomRenderer.sprite = SonNomSprites[Random.Range(0,SonNomSprites.Length)];
         time = 0;
         yield return new WaitForSeconds(3);
         done = false;
