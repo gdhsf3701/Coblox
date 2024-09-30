@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc64a87f-2c70-4f09-a57a-13b8de8dcdeb" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/InGame/Teacher/InGame_getmessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/InGame/Teacher/InGame_getmessage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/04_1_TeathcerInGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/04_1_TeathcerInGame.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +144,7 @@
       <workItem from="1727653246380" duration="711000" />
       <workItem from="1727687066579" duration="5694000" />
       <workItem from="1727709410921" duration="821000" />
-      <workItem from="1727711669129" duration="322000" />
+      <workItem from="1727711669129" duration="1089000" />
     </task>
     <servers />
   </component>

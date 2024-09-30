@@ -1341,7 +1341,7 @@ GameObject:
   - component: {fileID: 983982063}
   - component: {fileID: 983982062}
   m_Layer: 5
-  m_Name: Chart
+  m_Name: EndGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1443,7 +1443,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c8686a1d150274e40b9e77e9e39ac919, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2e3d67ddb1baa1f40b88128811d9563e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
