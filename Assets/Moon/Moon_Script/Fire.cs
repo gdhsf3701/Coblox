@@ -8,7 +8,6 @@ public class Fire : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI text;
     [SerializeField] MoveAndDrop pizza;
-    [SerializeField] GameObject game;
     private bool andyunsan = true;
     private float lastTime;
     int firstRand = 0;
