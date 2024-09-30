@@ -10,7 +10,7 @@ public class Bt_Manager : MonoBehaviour
 {
     private void Awake()
     {
-        SoundManager.Instance.PlaySound(Sound.EnemyHit);
+        
     }
 
     public void Quit_bt_Click()
