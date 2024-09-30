@@ -24,9 +24,11 @@ public class DoneChack : MonoBehaviour
             }
         }
         if(done&&andyunsan)
-        {   
+        {
+            print("2");
             andyunsan = false;
             GameManager.Instance.NowScore += int.Parse(DataBaseScript.Instance.siteData[DataBaseScript.Instance.site_sunsea,8]);
+            ChatManager.Instance.Edit_DataBase_Point(GameManager.Instance.NowScore);
         }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
@@ -34,8 +36,12 @@ public class DoneChack : MonoBehaviour
     {
         if (plate.DoneCheck()&&andyunsan)
         {
+            print("1");
+            print(int.Parse(DataBaseScript.Instance.siteData[DataBaseScript.Instance.site_sunsea, 8]));
             andyunsan = false;
-            GameManager.Instance.NowScore += int.Parse(DataBaseScript.Instance.siteData[DataBaseScript.Instance.site_sunsea,8])+100;
+            GameManager.Instance.NowScore += int.Parse(DataBaseScript.Instance.siteData[DataBaseScript.Instance.site_sunsea,8]);
+            GameManager.Instance.NowScore += int.Parse(DataBaseScript.Instance.siteData[DataBaseScript.Instance.site_sunsea+1,8]);
+            ChatManager.Instance.Edit_DataBase_Point(GameManager.Instance.NowScore);
         }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }

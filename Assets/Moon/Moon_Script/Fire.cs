@@ -64,11 +64,11 @@ public class Fire : MonoBehaviour
             GameManager.Instance.NowScore += Random.Range(1,5);
         }
         //총합점수 보내기
-        DataBaseScript.Instance.NowPoint = GameManager.Instance.NowScore;
+        ChatManager.Instance.Edit_DataBase_Point(GameManager.Instance.NowScore);
 
 
-        Destroy(GameManager.Instance.gameObject);
 
+        SceneManager.LoadScene("RestaurantStart");
         //메인화면으로 이동SceneManager.LoadScene();
     } 
 }

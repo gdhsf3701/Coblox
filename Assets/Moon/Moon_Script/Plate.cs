@@ -21,30 +21,34 @@ public class Plate : MonoBehaviour
             SetCursor();
         }
     }
-    [SerializeField] TextMeshProUGUI text;
+    [SerializeField] SetImage text;
     [SerializeField] GameObject[] elementals;
     [SerializeField] SpriteRenderer Dow;
     [SerializeField] Camera cam;
     [SerializeField] Collider2D Collider;
     [SerializeField] private Texture2D[] cursorTexture;
     [SerializeField] TMP_InputField inputField;
-    public string[] elemental = { "��", "����", "�Ǹ�", "�ø���", "���۷δ�" };
+    public string[] elemental = { "햄", "버섯", "피망", "올리브", "페퍼로니" };
     private string[] soSu = {"토마토소스" , "치즈" };
+    [SerializeField] bool isSosu = false;
     public int[] elementalWant = { 0, 0, 0, 0, 0 };
     public int[] elementalCount = { 0, 0, 0, 0, 0 };
     private bool done = true;
-    private bool[] doneCheck = { false , false };
+    private bool doneCheck = false;
     private bool sosuDone = false;
     [SerializeField] Sprite[] dowSprite;
 
+    
+
     private void Awake()
     {
+        
         NowElemental = -1;
         var munjealist = DataBaseScript.Instance.siteData;
         int su = DataBaseScript.Instance.site_sunsea;
         string k = munjealist[su, 1];
         int i = Random.Range(su, elemental.Length);
-        if (elemental   != null)
+        if (!isSosu)
         {
             
 
@@ -70,7 +74,7 @@ public class Plate : MonoBehaviour
                     print("����");
                     break;
             }
-            text.text = $"{elemental[i]}:{k}";
+            text.GetTexture(elemental[i],k);
             DataBaseScript.Instance.site_sunsea++;
             if(DataBaseScript.Instance.siteData.Length < su)
             {
@@ -113,7 +117,7 @@ public class Plate : MonoBehaviour
                         break;
                 }
             }
-            text.text = $"{soSu[0]}:{elemental[0]}";
+            text.GetTexture(soSu[0],elemental[0]);
 
             //elemental = new string[2];각각 1번은 토마토 소스 2번은 치즈소스 문제 넣으셈;
             //elementalWant = new int[2]//각각 1번은 토마토 소스 2번은 치즈소스 답 넣으셈;
@@ -138,33 +142,31 @@ public class Plate : MonoBehaviour
                     }
                 }
             }
+            else if (isSosu)
+            {
+                ChangeDow(nowElemental);
+            }
         }
     }
     public bool DoneCheck()
     {
-        foreach(var item in doneCheck)
-        {
-            if (done)
-            {
-                done = item;
-            }
-        }
+        done = doneCheck;
         return done;
     }
     private void SetCursor()
     {
         if (nowElemental >= -1 && nowElemental < cursorTexture.Length - 1)
         {
-            if (elemental[0] == "토마토소스")
+            if (isSosu)
             {
                 Cursor.SetCursor(cursorTexture[nowElemental + 1], new Vector2(cursorTexture[nowElemental + 1].width* 0.49f, cursorTexture[nowElemental + 1].height* 0.49f), CursorMode.ForceSoftware);
                 if(nowElemental != -1)
                 {
-                    text.text = $"{soSu[nowElemental]}:{elemental[nowElemental]}";
+                    text.GetTexture(soSu[nowElemental], elemental[nowElemental]);
                 }
                 else
                 {
-                    text.text = $"{soSu[nowElemental+1]}:{elemental[nowElemental+1]}";
+                    text.GetTexture(soSu[nowElemental + 1], elemental[nowElemental + 1]);
                 }
             }
             else
@@ -179,21 +181,27 @@ public class Plate : MonoBehaviour
         {
             return;
         }
-        if (elemental[nowElemental].ToString() == inputField.text)
+        elementalCount[nowElemental] = int.Parse(inputField.text);
+        if (elementalWant[0] == elementalCount[0] && elementalWant[1] == elementalCount[1])
         {
-            doneCheck[nowElemental] = true;
-            inputField.text = "";
+            doneCheck = true;
         }
         else
         {
-            doneCheck[nowElemental] = false;
-            inputField.text = "";
+            doneCheck = false;
         }
-        ChangeDow(nowElemental);
     }
 
     private void ChangeDow(int nowElemental)
     {
+        if (nowElemental == -1)
+        {
+            return;
+        }
+        if(Dow.sprite == dowSprite[nowElemental])
+        {
+            return;
+        }
         if (sosuDone)
         {
             Dow.sprite = dowSprite[2];
@@ -201,6 +209,7 @@ public class Plate : MonoBehaviour
         else
         {
             Dow.sprite= dowSprite[nowElemental];
+            sosuDone = true;
         }
     }
 
