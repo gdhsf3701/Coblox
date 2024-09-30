@@ -53,6 +53,7 @@ public class GameManager : MonoBehaviour
 
     public void TimeOver()
     {
+        Cursor.SetCursor(default, new Vector2(0, 0), CursorMode.Auto);
         Destroy(gameObject);
     }
 }
