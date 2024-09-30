@@ -44,7 +44,7 @@ public class Plate : MonoBehaviour
         int su = DataBaseScript.Instance.site_sunsea;
         string k = munjealist[su, 1];
         int i = Random.Range(su, elemental.Length);
-        if (elemental != null)
+        if (elemental   != null)
         {
             
 
@@ -86,9 +86,9 @@ public class Plate : MonoBehaviour
         else
         {
             elemental = new string[2];
-            elemental[1] = munjealist[su,1];
-            elemental[2] = munjealist[su+1,1];
-            for (int iss = 1; iss < 2; iss++)
+            elemental[0] = munjealist[su,1];
+            elemental[1] = munjealist[su+1,1];
+            for (int iss = 0; iss < 1; iss++)
             {
                 switch (munjealist[su, 8])
                 {

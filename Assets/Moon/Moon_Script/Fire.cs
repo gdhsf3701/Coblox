@@ -61,7 +61,7 @@ public class Fire : MonoBehaviour
         if(lastTime <= 0.5f && lastTime >= 0f && andyunsan)
         {
             andyunsan = false;
-            GameManager.Instance.NowScore += 100;
+            GameManager.Instance.NowScore += Random.Range(1,5);
         }
         //총합점수 보내기
         DataBaseScript.Instance.NowPoint = GameManager.Instance.NowScore;
@@ -69,6 +69,8 @@ public class Fire : MonoBehaviour
         ChatManager.Instance.Edit_DataBase_Point(DataBaseScript.Instance.NowPoint);
 
         Destroy(GameManager.Instance.gameObject);
+
+        SceneManager.LoadScene("05_EndGame");
         //메인화면으로 이동SceneManager.LoadScene();
     } 
 }

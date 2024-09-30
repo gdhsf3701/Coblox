@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    [SerializeField]float timer;
+    float timer;
     int _nowScore = 0;
 
     public int NowScore 
@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
         scoreTxt = GameObject.Find("scoreTxt").GetComponent<TextMeshProUGUI>();
         scoreTxt.text = _nowScore.ToString();
         DontDestroyOnLoad(gameObject);
+        timer = DataBaseScript.Instance.Time;
     }
     private void Update()
     {
@@ -56,9 +57,7 @@ public class GameManager : MonoBehaviour
     public void TimeOver()
     {
         //총합점수 보내기  ---- Done.
-
         ChatManager.Instance.Edit_DataBase_Point(NowScore);
         Destroy(gameObject);
-        //메인화면으로 이동SceneManager.LoadScene();
     }
 }
