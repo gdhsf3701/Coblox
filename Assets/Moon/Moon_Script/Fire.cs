@@ -66,11 +66,9 @@ public class Fire : MonoBehaviour
         //총합점수 보내기
         DataBaseScript.Instance.NowPoint = GameManager.Instance.NowScore;
 
-        ChatManager.Instance.Edit_DataBase_Point(DataBaseScript.Instance.NowPoint);
 
         Destroy(GameManager.Instance.gameObject);
 
-        SceneManager.LoadScene("05_EndGame");
         //메인화면으로 이동SceneManager.LoadScene();
     } 
 }

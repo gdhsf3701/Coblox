@@ -56,8 +56,6 @@ public class GameManager : MonoBehaviour
 
     public void TimeOver()
     {
-        //총합점수 보내기  ---- Done.
-        ChatManager.Instance.Edit_DataBase_Point(NowScore);
         Destroy(gameObject);
     }
 }
