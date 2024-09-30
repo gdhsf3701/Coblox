@@ -61,7 +61,7 @@ public class Fire : MonoBehaviour
         if(lastTime <= 0.5f && lastTime >= 0f && andyunsan)
         {
             andyunsan = false;
-            GameManager.Instance.NowScore += 100;
+            GameManager.Instance.NowScore += Random.Range(1,5);
         }
         //총합점수 보내기
         DataBaseScript.Instance.NowPoint = GameManager.Instance.NowScore;
