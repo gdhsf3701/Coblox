@@ -24,14 +24,7 @@ public class InGame_getmessage : MonoBehaviour
         _chatManager.PlzresetList -= Makelanking;
     }
 
-    private void Update()
-    {
-        
-        if (Input.GetKeyUp(KeyCode.E))
-        {
-            SendEndData();
-        }
-    }
+    
     
     public void SendEndData(){
         string mesg = "";
