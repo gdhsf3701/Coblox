@@ -40,12 +40,13 @@ public class Plate : MonoBehaviour
     private void Awake()
     {
         NowElemental = -1;
-        if(elemental != null)
+        var munjealist = DataBaseScript.Instance.siteData;
+        int su = DataBaseScript.Instance.site_sunsea;
+        string k = munjealist[su, 1];
+        int i = Random.Range(su, elemental.Length);
+        if (elemental != null)
         {
-            var munjealist = DataBaseScript.Instance.siteData;
-            int su = DataBaseScript.Instance.site_sunsea;
-            string k = munjealist[su, 1];
-            int i = Random.Range(su, elemental.Length);
+            
 
             switch (munjealist[su, 8])
             {
@@ -84,6 +85,36 @@ public class Plate : MonoBehaviour
         }
         else
         {
+            elemental = new string[2];
+            elemental[1] = munjealist[su,1];
+            elemental[2] = munjealist[su+1,1];
+            for (int iss = 1; iss < 2; iss++)
+            {
+                switch (munjealist[su, 8])
+                {
+                    case "1":
+                        elementalWant[iss] = int.Parse(munjealist[iss, 2]);
+                        break;        
+                    case "2":         
+                        elementalWant[iss] = int.Parse(munjealist[iss, 3]);
+                        break;        
+                    case "3":         
+                        elementalWant[iss] = int.Parse(munjealist[iss, 4]);
+                        break;        
+                    case "4":         
+                        elementalWant[iss] = int.Parse(munjealist[iss, 5]);
+                        break;        
+                    case "5":         
+                        elementalWant[iss] = int.Parse(munjealist[iss, 6]);
+                        break;
+
+                    default:
+                        print("����");
+                        break;
+                }
+            }
+            text.text = $"{soSu[0]}:{elemental[0]}";
+
             //elemental = new string[2];각각 1번은 토마토 소스 2번은 치즈소스 문제 넣으셈;
             //elementalWant = new int[2]//각각 1번은 토마토 소스 2번은 치즈소스 답 넣으셈;
             //elementalCount = new int[2];
