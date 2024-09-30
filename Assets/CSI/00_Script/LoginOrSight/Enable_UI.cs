@@ -20,6 +20,7 @@ public class Enable_UI : MonoBehaviour
 
     public void Open_LoginPopup()
     {
+        SoundManager.Instance.PlaySound(Sound.ButtonClick);
         //Main.SetActive(false);
         GetComponent<Login>().Back_Bt.interactable = true; 
         SetEnableBt(false);
@@ -27,6 +28,7 @@ public class Enable_UI : MonoBehaviour
     }
     public void Open_sigupPopup()
     {
+        SoundManager.Instance.PlaySound(Sound.ButtonClick);
         //Main.SetActive(false);
         SetEnableBt(false);
 
@@ -43,6 +45,7 @@ public class Enable_UI : MonoBehaviour
     }
     public void returnMain()
     {
+        SoundManager.Instance.PlaySound(Sound.ButtonClick);
         DataBaseScript.Instance.Resetvalue();
 
         login_Script.resetUI();
@@ -61,6 +64,7 @@ public class Enable_UI : MonoBehaviour
 
     public void returnstartscreen()
     {
+        SoundManager.Instance.PlaySound(Sound.ButtonClick);
         SceneManager.LoadScene("01_Start");
 
 

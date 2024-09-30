@@ -13,7 +13,7 @@ public class SoundManager : MonoSingleton<SoundManager>
 
     void Awake()
     {
-       
+       DontDestroyOnLoad(gameObject);
         // AudioSource 컴포넌트 가져오기 또는 추가
         _audioSource = gameObject.GetComponent<AudioSource>();
         if (_audioSource == null)

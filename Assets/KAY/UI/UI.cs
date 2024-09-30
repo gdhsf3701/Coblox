@@ -13,6 +13,8 @@ public class UI : MonoBehaviour
     private Button Setting;     // 설정 버튼
     private Button close;       // 게임 종료 버튼
     private Button closeSetting; // 설정 닫기 버튼
+    private Button resetButton;
+    private Button muteButton; 
 
     private Slider bgmSlider;   // BGM 볼륨 슬라이더
     private Slider soundSlider; // 사운드 볼륨 슬라이더
@@ -27,6 +29,8 @@ public class UI : MonoBehaviour
         Setting = root.Q<Button>("Setting");
         close = root.Q<Button>("Close");
         closeSetting = root.Q<Button>("CloseSetting");
+        resetButton = root.Q<Button>("ResetSetting");
+        muteButton = root.Q<Button>("StopMusic");
 
         // 슬라이더 요소들 가져오기
         bgmSlider = root.Q<Slider>("BGMSlider");
@@ -41,6 +45,8 @@ public class UI : MonoBehaviour
         Setting.RegisterCallback<ClickEvent>(OpenSetting);
         close.RegisterCallback<ClickEvent>(Close);
         closeSetting.RegisterCallback<ClickEvent>(CloseSetting);
+        resetButton.RegisterCallback<ClickEvent>(ResetSetting);
+        muteButton.RegisterCallback<ClickEvent>(Umsoger);
 
         // 슬라이더 값 변경 시 볼륨 설정
         bgmSlider.RegisterValueChangedCallback(evt =>
@@ -73,8 +79,19 @@ public class UI : MonoBehaviour
         _startUI.style.display = DisplayStyle.None;
        
     }
+    private void ResetSetting(ClickEvent evt)
+    {
+        SoundManager.Instance.PlaySound(Sound.ButtonClick);
+        SoundManager.Instance.SetVolume(50 / 100f);
 
-    // 설정 UI 닫기
+    }
+    private void Umsoger(ClickEvent evt)
+    {
+        SoundManager.Instance.PlaySound(Sound.ButtonClick);
+        SoundManager.Instance.SetVolume(0);
+        
+    }
+
     private void CloseSetting(ClickEvent evt)
     {
         SoundManager.Instance.PlaySound(Sound.ButtonClick);
@@ -83,7 +100,6 @@ public class UI : MonoBehaviour
         
     }
 
-    // 게임 종료
     private void Close(ClickEvent evt)
     {
         Application.Quit();

@@ -21,6 +21,7 @@ public class sighup : MonoBehaviour
 
     public void sighup_bt()
     {
+        SoundManager.Instance.PlaySound(Sound.ButtonClick);
         if (nickname.text.Length == 0)
         {
             Text.color = new Color(0.6603774f,0.1775543f,0.1775543f);
