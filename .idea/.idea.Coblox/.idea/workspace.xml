@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc64a87f-2c70-4f09-a57a-13b8de8dcdeb" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/04_1_TeathcerInGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/04_1_TeathcerInGame.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/ALLSCREEN/DataBaseScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/ALLSCREEN/DataBaseScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/Backend/SetImage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/Backend/SetImage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/Chat/ChatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/Chat/ChatManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/StartPy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/StartPy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/01_Start.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/01_Start.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Moon/MoonScenes/RestaurantStart.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Moon/MoonScenes/RestaurantStart.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Moon/Moon_Script/Plate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Moon/Moon_Script/Plate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,11 +30,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/CSI/00_Script/Chat/ChatManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CSI/00_Script/MiniGaem/View_MiniGame.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CSI/00_Script/Sounds/ObjectPool/PoolManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/UNITY/Git/Coblox/Assets/CSI/00_Script/StartPy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/UNITY/Git/Coblox/Assets/CSI/00_Script/StartPy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/UNITY/Git/Coblox/Assets/CSI/00_Script/StartPy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/StartPyPlay.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.spriteshape@9.0.2/Runtime/SpriteShapeController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestLaunchers/PlayerLauncher.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.33/UnityEditor.TestRunner/TestLaunchers/PlayerLauncherBuildOptions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/InputField.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/InputField/ContentValidation.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
@@ -62,7 +72,7 @@
       <method v="2" />
     </configuration>
     <configuration name="독립실행형 플레이어" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../Build/shuhack_Git/Coblox.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../Build/shuhack_Git\Coblox.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="D:\빌드\shuhack_Git" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -144,7 +154,15 @@
       <workItem from="1727653246380" duration="711000" />
       <workItem from="1727687066579" duration="5694000" />
       <workItem from="1727709410921" duration="821000" />
-      <workItem from="1727711669129" duration="1089000" />
+      <workItem from="1727711669129" duration="1801000" />
+      <workItem from="1727799275679" duration="1152000" />
+      <workItem from="1728915012777" duration="2970000" />
+      <workItem from="1728923841375" duration="820000" />
+      <workItem from="1729058816048" duration="957000" />
+      <workItem from="1729125045095" duration="302000" />
+      <workItem from="1729480499662" duration="3942000" />
+      <workItem from="1729498021705" duration="5247000" />
+      <workItem from="1729521911443" duration="1192000" />
     </task>
     <servers />
   </component>
@@ -191,7 +209,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>

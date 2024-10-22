@@ -10,7 +10,7 @@ public class DataBaseScript : MonoBehaviour
     public bool isOwner;
     public string UID;
     public string NicName;
-    public string[ , ] siteData;
+    [field:SerializeField]public string[ , ] siteData;
     public int site_sunsea = 0;
     public float Time;
     public int NowPoint;

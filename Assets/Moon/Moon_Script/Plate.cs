@@ -45,6 +45,11 @@ public class Plate : MonoBehaviour
         
         NowElemental = -1;
         var munjealist = DataBaseScript.Instance.siteData;
+        foreach (var VARIABLE in munjealist)
+        {
+            print(VARIABLE);
+        }
+        print(munjealist);
         int su = DataBaseScript.Instance.site_sunsea;
         string k = munjealist[su, 1];
         int i = Random.Range(su, elemental.Length);
@@ -179,10 +184,15 @@ public class Plate : MonoBehaviour
                 Cursor.SetCursor(cursorTexture[nowElemental + 1], new Vector2(cursorTexture[nowElemental + 1].width* 0.49f, cursorTexture[nowElemental + 1].height* 0.49f), CursorMode.ForceSoftware);
                 if(nowElemental != -1)
                 {
+                    
+                    print("아아아아아아아");
+                    print(elemental[nowElemental]);
                     text.GetTexture(soSu[nowElemental], elemental[nowElemental]);
                 }
                 else
                 {
+                    print("아아아아아아아????");
+                    print(elemental[nowElemental+1]);
                     text.GetTexture(soSu[nowElemental + 1], elemental[nowElemental + 1]);
                 }
             }

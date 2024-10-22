@@ -135,7 +135,6 @@ public class SetImage : MonoBehaviour
         
         RequestData requestData = new RequestData { param = single_param }; 
         string json = JsonUtility.ToJson(requestData);
-        // json에서 'param' 키가 들어간 것을 확인하세요.
         print($"Sending JSON data: {json}");
         using UnityWebRequest request = new UnityWebRequest(url, "POST");
         byte[] bodyRaw = Encoding.UTF8.GetBytes(json);

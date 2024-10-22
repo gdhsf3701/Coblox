@@ -81,6 +81,7 @@ public class StartPy : MonoBehaviour
         {
             print("실행된 프로세스 없음");
         }
+
         
     }
 
@@ -89,7 +90,9 @@ public class StartPy : MonoBehaviour
     public class RequestData
     {
         public string param;
+        
     }
 
+    
 
 }

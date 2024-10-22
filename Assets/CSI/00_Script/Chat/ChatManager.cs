@@ -170,7 +170,7 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
                         $"{DataBaseScript.Instance.siteData[i, 5]}$" +
                         $"{DataBaseScript.Instance.siteData[i, 6]}$" +
                         $"{DataBaseScript.Instance.siteData[i, 7]}$" +
-                        $"{DataBaseScript.Instance.siteData[i, 8]}`";
+                        $"{DataBaseScript.Instance.siteData[i, 8]}#";
 
             }
 
@@ -489,11 +489,13 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
                     {
                         var msg = Message.Split(":")[2];
                         int a = 0;
-                        DataBaseScript.Instance.siteData = new string[msg.Split("`").GetLength(0), 9]; 
-                        foreach (var msgs in msg.Split("`"))
+                        DataBaseScript.Instance.siteData = new string[msg.Split("#").GetLength(0)-1, 9]; 
+                        foreach (var msgs in msg.Split("#"))
                         {
                             //문제1$(2-3i)(5+4i)$1$11$21$31$41$1$1
                             print(msgs);
+                            if(msg == "") return;
+                            if(msg == null) return;
                             print(a);
                             DataBaseScript.Instance.siteData[a, 0] = msgs.Split("$")[0];
                             DataBaseScript.Instance.siteData[a,1] = msgs.Split("$")[1]; 
@@ -594,9 +596,4 @@ public class ChatManager : MonoBehaviour ,BackndChat.IChatClientListener
     
 
 
-    /*private void OnApplicationQuit()
-    {
-        ChatClient.SendLeaveChannel("Main",RoomName,RoomCode);
-        ChatClient?.Dispose();
-    }*/
 }
