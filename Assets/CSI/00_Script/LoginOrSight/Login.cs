@@ -16,7 +16,7 @@ public class Login : MonoBehaviour
     [SerializeField]private Image loginimage;
     [SerializeField]private Sprite Don,startIm;
     [SerializeField] public Button Back_Bt;
-
+    public string nickname_save;
     private void Awake()
     {
         TeamSellct.SetActive(false);
@@ -58,29 +58,21 @@ public class Login : MonoBehaviour
                     return;
                 }
             }
+
             if (nicknamel.text.Length == 0)
             {
-                Text.color = new Color(0.6603774f,0.1775543f,0.1775543f);
+                Text.color = new Color(0.6603774f, 0.1775543f, 0.1775543f);
                 Text.text = $"별명이 없습니다.";
                 return;
             }
 
-            //////////////////////////////////////////////////////////////게임 신 들어가기
+            //////////////////////////////////////////////////////////////게임 신 들어가기 
             Text.color = Color.white;
             Text.text = "로그인중...";
-        
-            Backend.BMember.CreateNickname(nicknamel.text);
-            /*var gild = Backend.Guild.GetMyGuildInfoV3();
-            if (gild.IsSuccess())
-            {
-                DataBaseScript.Instance.inGuild = true;
-            }
-            else
-            {
-                print("길드 불러오기 실패");
-            }*/
+            if(nickname_save != nicknamel.text)
+                Backend.BMember.CreateNickname(nicknamel.text);
             Back_Bt.interactable = false;
-            TeamSellct.SetActive(true);
+            TeamSellct.SetActive(true); 
             DataBaseScript.Instance.NicName = nicknamel.text;
             DataBaseScript.Instance.UID = Backend.UID;
             //SceneManager.LoadScene("03_Main");
@@ -113,6 +105,8 @@ public class Login : MonoBehaviour
             {
                 print("닉네임 널");
                 nicknamel.text = Backend.UserNickName;
+                nickname_save = nicknamel.text;
+                
                 
             }
             else
@@ -124,9 +118,9 @@ public class Login : MonoBehaviour
         else
         {
             Text.color = new Color(0.6603774f,0.1775543f,0.1775543f);
-            Text.text = bro.GetMessage();
+            
 
-            /*switch (bro.GetStatusCode())
+            switch (bro.GetStatusCode())
             {
                 case "400":
                     Text.text = "필수 칸을 다시 한번 확인해주세요.";
@@ -138,9 +132,9 @@ public class Login : MonoBehaviour
                     Text.text = "계정이 차단되었습니다. 개발자에게 문의주세요.";
                     break;
                 default:
-                    Text.text = "알 수 없는 오류";
+                    Text.text = bro.GetMessage();
                     break;
-            }*/
+            }
         }
     }
 
@@ -156,5 +150,6 @@ public class Login : MonoBehaviour
         PW.text = "";
         nicknamel.text = "";
         Text.text = "";
+        nickname_save = "";
     }
 }
