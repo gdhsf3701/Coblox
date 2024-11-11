@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc64a87f-2c70-4f09-a57a-13b8de8dcdeb" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Coblox/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/ALLSCREEN/DataBaseScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/ALLSCREEN/DataBaseScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/Backend/SetImage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/Backend/SetImage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/Chat/ChatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/Chat/ChatManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/StartPy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/StartPy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/01_Start.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/01_Scenes/Main/01_Start.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Moon/MoonScenes/RestaurantStart.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Moon/MoonScenes/RestaurantStart.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Moon/Moon_Script/Plate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Moon/Moon_Script/Plate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CSI/00_Script/LoginOrSight/Login.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CSI/00_Script/LoginOrSight/Login.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,6 +155,7 @@
       <workItem from="1729480499662" duration="3942000" />
       <workItem from="1729498021705" duration="5247000" />
       <workItem from="1729521911443" duration="1192000" />
+      <workItem from="1729641340153" duration="4475000" />
     </task>
     <servers />
   </component>
